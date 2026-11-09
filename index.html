@@ -282,6 +282,44 @@
   .reveal{opacity:0;transform:translateY(34px);transition:all .8s cubic-bezier(.2,.7,.3,1)}
   .reveal.show{opacity:1;transform:none}
 
+  /* ============ Knowledge Library ============ */
+  .kb-toolbar{display:flex;gap:.8rem;flex-wrap:wrap;align-items:center;margin-bottom:1.4rem}
+  .kb-search{flex:1;min-width:220px;display:flex;align-items:center;gap:.6rem;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:.65rem 1rem}
+  .kb-search input{flex:1;border:none;background:transparent;color:var(--text);font-family:inherit;font-size:.95rem;outline:none;width:100%}
+  .tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.8rem}
+  .chip{background:var(--card);border:1px solid var(--border);color:var(--text-soft);font-family:inherit;font-size:.85rem;font-weight:600;padding:.45rem 1.1rem;border-radius:999px;cursor:pointer;transition:all .2s}
+  .chip:hover{border-color:var(--accent);color:var(--accent)}
+  .chip.active{background:var(--accent);border-color:var(--accent);color:#fff}
+  .kb-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.2rem}
+  .kb-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.3rem 1.4rem;transition:all .25s}
+  .kb-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--accent)}
+  .kb-card.hide{display:none}
+  .kb-card h4{font-size:1.02rem;font-weight:700;display:flex;align-items:center;gap:.55rem;margin-bottom:.5rem}
+  .kb-formula{direction:ltr;text-align:start;font-family:Consolas,"Courier New",monospace;font-size:.98rem;font-weight:600;background:var(--accent-soft);color:var(--accent);border-radius:12px;padding:.7rem .9rem;margin:.5rem 0 .6rem;overflow-x:auto;white-space:nowrap}
+  .kb-card p{font-size:.88rem;color:var(--text-soft)}
+  .kb-note{font-size:.78rem;font-weight:600;color:var(--accent);margin-top:.45rem;display:block}
+  .consts-wrap{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:var(--card);margin-top:1.2rem}
+  .const-table{width:100%;border-collapse:collapse;font-size:.92rem}
+  .const-table th,.const-table td{padding:.7rem 1rem;text-align:start;border-bottom:1px solid var(--border)}
+  .const-table tr:last-child td{border-bottom:none}
+  .const-table th{background:var(--bg-alt);font-weight:700}
+  .const-table td:first-child{font-weight:700;color:var(--accent)}
+  .const-table td:last-child,.const-table th:last-child{direction:ltr;text-align:start}
+  .convert-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+  .convert-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem}
+  .convert-card h4{font-size:1.05rem;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+  .conv-row{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin-bottom:.7rem}
+  .conv-row input,.conv-row select{background:var(--bg-alt);border:1px solid var(--border);color:var(--text);font-family:inherit;font-size:1rem;border-radius:12px;padding:.6rem .8rem;outline:none}
+  .conv-row input{width:150px;flex:1}
+  .conv-row input:focus,.conv-row select:focus{border-color:var(--accent)}
+  .conv-result{font-size:1.35rem;font-weight:800;color:var(--accent);direction:ltr;text-align:start;margin-top:.4rem;min-height:1.6em}
+  .roadmap{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin-top:1rem}
+  .rm-group{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem;transition:all .25s}
+  .rm-group:hover{border-color:var(--accent);transform:translateY(-3px)}
+  .rm-group h4{display:flex;align-items:center;gap:.5rem;font-size:.98rem;margin-bottom:.7rem;color:var(--accent)}
+  .rm-group ul{list-style:none;display:flex;flex-direction:column;gap:.35rem}
+  .rm-group li{font-size:.88rem;color:var(--text-soft)}
+
   @media(max-width:860px){
     .hero{flex-direction:column-reverse;text-align:center;padding-top:6.5rem;gap:2rem}
     .hero-cta,.hero-stats{justify-content:center}
@@ -311,6 +349,7 @@
       <li><a href="#skills">⚡ <span data-fa="مهارت‌ها" data-en="Skills">مهارت‌ها</span></a></li>
       <li><a href="#resume">📄 <span data-fa="رزومه" data-en="Resume">رزومه</span></a></li>
       <li><a href="#projects">💼 <span data-fa="نمونه کارها" data-en="Projects">نمونه کارها</span></a></li>
+      <li><a href="#knowledge">📚 <span data-fa="کتابخانه" data-en="Library">کتابخانه</span></a></li>
     </ul>
     <div class="nav-tools">
       <button class="tool-btn" id="langBtn" title="Switch language">EN</button>
@@ -445,6 +484,273 @@
       <h3 data-fa="شروع تحصیل در مهندسی شیمی" data-en="Started Chemical Engineering">شروع تحصیل در مهندسی شیمی</h3>
       <h4 data-fa="دانشگاه صنعتی قوچان — مقطع کارشناسی" data-en="Quchan University of Technology — Undergraduate">دانشگاه صنعتی قوچان — مقطع کارشناسی</h4>
       <p data-fa="قبولی در رشته‌ی مهندسی شیمی و مهاجرت از بوشهر به قوچان برای ادامه‌ی تحصیل؛ شروع یادگیری جدی و علاقه‌مندی به بخش صنعت و شبیه‌سازی." data-en="Admitted to Chemical Engineering and moved from Bushehr to Quchan; started building a serious interest in industry and simulation.">قبولی در رشته‌ی مهندسی شیمی و مهاجرت از بوشهر به قوچان برای ادامه‌ی تحصیل؛ شروع یادگیری جدی و علاقه‌مندی به بخش صنعت و شبیه‌سازی.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= KNOWLEDGE LIBRARY ================= -->
+<section id="knowledge">
+  <h2 class="section-title reveal" data-fa="کتابخانه‌ی مهندسی شیمی" data-en="Chemical Engineering Library">کتابخانه‌ی مهندسی شیمی</h2>
+  <p class="section-sub reveal" data-fa="مفاهیم، اصول و فرمول‌های پایه &mdash; هر چیزی که یک مهندس شیمی باید بداند، یکجا و دوزبانه" data-en="Core concepts, principles and formulas &amp;mdash; everything a chemical engineer must know, in one place">مفاهیم، اصول و فرمول‌های پایه — هر چیزی که یک مهندس شیمی باید بداند، یکجا و دوزبانه</p>
+
+  <div class="kb-toolbar reveal">
+    <div class="kb-search">
+      <span>🔎</span>
+      <input type="text" id="kbSearch" data-fa="جستجو در مفاهیم و فرمول‌ها…" data-en="Search concepts &amp; formulas…" placeholder="جستجو در مفاهیم و فرمول‌ها…">
+    </div>
+  </div>
+
+  <div class="tabs reveal">
+    <button class="chip active" data-filter="all" data-fa="همه" data-en="All">همه</button>
+    <button class="chip" data-filter="thermo" data-fa="🌡️ ترمودینامیک" data-en="🌡️ Thermodynamics">🌡️ ترمودینامیک</button>
+    <button class="chip" data-filter="fluids" data-fa="💧 مکانیک سیالات" data-en="💧 Fluid Mechanics">💧 مکانیک سیالات</button>
+    <button class="chip" data-filter="heat" data-fa="🔥 انتقال حرارت" data-en="🔥 Heat Transfer">🔥 انتقال حرارت</button>
+    <button class="chip" data-filter="mass" data-fa="⚛️ انتقال جرم" data-en="⚛️ Mass Transfer">⚛️ انتقال جرم</button>
+    <button class="chip" data-filter="reac" data-fa="⚗️ راکتور و سینتیک" data-en="⚗️ Reactors &amp;amp; Kinetics">⚗️ راکتور و سینتیک</button>
+    <button class="chip" data-filter="sep" data-fa="🛢️ جداسازی" data-en="🛢️ Separations">🛢️ جداسازی</button>
+    <button class="chip" data-filter="ctrl" data-fa="🎛️ کنترل و ایمنی" data-en="🎛️ Control &amp;amp; Safety">🎛️ کنترل و ایمنی</button>
+  </div>
+
+  <div class="kb-grid">
+    <!-- ======== THERMO ======== -->
+    <div class="kb-card reveal" data-cat="thermo">
+      <h4><span data-fa="📏 قانون گاز ایده‌آل" data-en="📏 Ideal Gas Law">📏 قانون گاز ایده‌آل</span></h4>
+      <div class="kb-formula">PV = nRT</div>
+      <p data-fa="رابطه‌ی حالت گازهای کم‌چگالی و دمای زیاد؛ R = 8.314 J/(mol·K). پایه‌ی موازنه‌های گازی و طراحی تجهیزات." data-en="Equation of state for low-density, high-temperature gases; R = 8.314 J/(mol·K). The backbone of gas balances and equipment sizing.">رابطه‌ی حالت گازهای کم‌چگالی و دمای زیاد؛ R = 8.314 J/(mol·K). پایه‌ی موازنه‌های گازی و طراحی تجهیزات.</p>
+    </div>
+    <div class="kb-card reveal" data-cat="thermo">
+      <h4><span data-fa="📐 معادله‌ی van der Waals" data-en="📐 van der Waals EOS">📐 معادله‌ی van der Waals</span></h4>
+      <div class="kb-formula">(P + a·n²/V²)·(V − n·b) = nRT</div>
+      <p data-fa="تصحیح حجم مولکولی (b) و نیروهای جاذبه (a) در فشار بالا؛ نقطه‌ی شروع فهم معادلات حالت واقعی." data-en="Corrects molecular volume (b) and attraction forces (a) at high pressure; the gateway to real EOS models.">تصحیح حجم مولکولی (b) و نیروهای جاذبه (a) در فشار بالا؛ نقطه‌ی شروع فهم معادلات حالت واقعی.</p>
+    </div>
+    <div class="kb-card reveal" data-cat="thermo">
+      <h4><span data-fa="🧊 قوانین اول و دوم ترمودینامیک" data-en="🧊 1st &amp;amp; 2nd Laws of Thermodynamics">🧊 قوانین اول و دوم ترمودینامیک</span></h4>
+      <div class="kb-formula">ΔU = Q − W &nbsp;&nbsp;|&nbsp;&nbsp; ΔS(universe) ≥ 0</div>
+      <p data-fa="پایستگی انرژی برای هر سیستم بسته؛ و اینکه جهان به‌سمت افزایش بی‌نظمی می‌رود — پس هیچ فرآیندی ۱۰۰٪ بازده نیست." data-en="Energy conservation for any closed system; and the universe tends toward more disorder — so no process is 100% efficient.">پایستگی انرژی برای هر سیستم بسته؛ و اینکه جهان به‌سمت افزایش بی‌نظمی می‌رود — پس هیچ فرآیندی ۱۰۰٪ بازده نیست.</p>
+    </div>
+    <div class="kb-card reveal" data-cat="thermo">
+      <h4><span data-fa="⚡ انرژی آزاد گیبس" data-en="⚡ Gibbs Free Energy">⚡ انرژی آزاد گیبس</span></h4>
+      <div class="kb-formula">ΔG = ΔH − T·ΔS</div>
+      <p data-fa="اگر ΔG منفی باشد، واکنش خودبه‌خودی است؛ در ΔG = 0 سیستم در تعادل است. کلید تحلیل واکنش‌ها و تعادل فاز." data-en="If ΔG &amp;lt; 0 the reaction is spontaneous; ΔG = 0 means equilibrium. The key to reaction and phase-equilibrium analysis.">اگر ΔG منفی باشد، واکنش خودبه‌خودی است؛ در ΔG = 0 سیستم در تعادل است. کلید تحلیل واکنش‌ها و تعادل فاز.</p>
+    </div>
+    <div class="kb-card reveal" data-cat="thermo">
+      <h4><span data-fa="🌀 فاگاسیته و تعادل فاز" data-en="🌀 Fugacity &amp;amp; Phase Equilibrium">🌀 فاگاسیته و تعادل فاز</span></h4>
+      <div class="kb-formula">f(liquid) = f(vapor)</div>
+      <p data-fa="در تعادل، فاگاسیته‌ی هر جزء در دو فاز برابر است. HYSYS و Aspen با معادله‌ی حالت Peng–Robinson این را محاسبه می‌کنند." data-en="At equilibrium, each component's fugacity is equal in both phases. HYSYS and Aspen calculate this via the Peng–Robinson EOS.">در تعادل، فاگاسیته‌ی هر جزء در دو فاز برابر است. HYSYS و Aspen با معادله‌ی حالت Peng–Robinson این را محاسبه می‌کنند.</p>
+      <span class="kb-note" data-fa="⭐ ضروری برای شبیه‌سازی صنعتی" data-en="⭐ Essential for industrial simulation">⭐ ضروری برای شبیه‌سازی صنعتی</span>
+    </div>
+    <div class="kb-card reveal" data-cat="thermo">
+      <h4><span data-fa="🌡️ معادله‌ی کلزیوس–کلاپیرون" data-en="🌡️ Clausius–Clapeyron">🌡️ معادله‌ی کلزیوس–کلاپیرون</span></h4>
+      <div class="kb-formula">ln(P₂/P₁) = −(ΔH°vap/R)·(1/T₂ − 1/T₁)</div>
+      <p data-fa="رابطه‌ی فشار بخار و دما؛ مبنای خطوط تعادل مایع–بخار و تقطیرهای یک‌جزئی." data-en="Relates vapor pressure to temperature; the basis of liquid–vapor equilibrium lines and single-component distillation.">رابطه‌ی فشار بخار و دما؛ مبنای خطوط تعادل مایع–بخار و تقطیرهای یک‌جزئی.</p>
+    </div>
+
+    <!-- ======== FLUIDS ======== -->
+    <div class="kb-card reveal" data-cat="fluids">
+      <h4><span data-fa="🌊 عدد رینولدز" data-en="🌊 Reynolds Number">🌊 عدد رینولدز</span></h4>
+      <div class="kb-formula">Re = ρ·v·D / μ</div>
+      <p data-fa="Re کمتر از ۲۳۰۰: جریان لایه‌ای؛ Re بیشتر از ۴۰۰۰: آشفته. اولین محاسبه‌ی هر خط لوله و مبدل." data-en="Re &amp;lt; 2300: laminar; Re &amp;gt; 4000: turbulent. The first calculation for any pipe or exchanger.">Re &lt; 2300: جریان لایه‌ای؛ Re &gt; 4000: آشفته. اولین محاسبه‌ی هر خط لوله و مبدل.</p>
+    </div>
+    <div class="kb-card reveal" data-cat="fluids">
+      <h4><span data-fa="🎨 معادله‌ی برنولی" data-en="🎨 Bernoulli Equation">🎨 معادله‌ی برنولی</span></h4>
+      <div class="kb-formula">P/ρ + v²/2 + g·z = constant</div>
+      <p data-fa="پایستگی انرژی مکانیکی برای جریان یکنواخت، لزجت‌گیر — فشار، سرعت و ارتفاع یکدیگر را جابجا می‌کنند." data-en="Mechanical energy conservation for inviscid steady flow — pressure, velocity and elevation trade off along a streamline.">پایستگی انرژی مکانیکی برای جریان یکنواخت بدون لزجت — فشار، سرعت و ارتفاع یکدیگر را جابجا می‌کنند.</p>
+    </div>
+    <div class="kb-card reveal" data-cat="fluids">
+      <h4><span data-fa="📉 افت فشار دارسی–وایسباخ" data-en="📉 Darcy–Weisbach Pressure Drop">📉 افت فشار دارسی–وایسباخ</span></h4>
+      <div class="kb-formula">ΔP = f·(L/D)·(ρ·v²/2)</div>
+      <p data-fa="ضریب اصطکاک f از نمودار مودی یا معادلات آشفته؛ به‌همراه ضریب K برای اتصالات — ضروری برای انتخاب پمپ." data-en="Friction factor f from the Moody chart or turbulent correlations; plus K-values for fittings — needed for pump selection.">ضریب اصطکاک f از نمودار مودی یا معادلات آشفته؛ به‌همراه ضریب K برای اتصالات — ضروری برای انتخاب پمپ.</p>
+    </div>
+    <div class="kb-card reveal" data-cat="fluids">
+      <h4><span data-fa="💧 NPSH و مراقبت از پمپ" data-en="💧 NPSH &amp;amp; Pump Safety">💧 NPSH و مراقبت از پمپ</span></h4>
+      <div class="kb-formula">NPSH(a) &gt; NPSH(r) + margin(&asymp;0.5 m)</div>
+      <p data-fa="اگر فشار در ورودی پمپ کمتر از فشار بخار سیال شود، پمپ دچار کاویتاسیون می‌شود و حباب‌ها فرومی‌ریزند و به پره‌ها آسیب می‌زنند." data-en="If available suction pressure falls below vapor pressure, the pump cavitates — bubbles implode and damage the impeller.">اگر فشار مکیده در ورودی پمپ کمتر از فشار بخار سیال شود، پمپ دچار کاویتاسیون می‌شود و حباب‌ها به پره‌ها آسیب می‌زنند.</p>
+    </div>
+
+    <!-- ======== HEAT ======== -->
+    <div class="kb-card reveal" data-cat="heat">
+      <h4><span data-fa="🧱 رسانش — قانون فوریه" data-en="🧱 Conduction — Fourier's Law">🧱 رسانش — قانون فوریه</span></h4>
+      <div class="kb-formula">q = −k·A·(dT/dx)</div>
+      <p data-fa="انتقال حرارت در جامدات و سیالات ساکن؛ هدایت حرارتی k در فلزها زیاد و در عایق‌ها کم است." data-en="Heat flow through solids and stagnant fluids; thermal conductivity k is high in metals and low in insulators.">انتقال حرارت در جامدات و سیالات ساکن؛ هدایت حرارتی k در فلزها زیاد و در عایق‌ها کم است.</p>
+    </div>
+    <div class="kb-card reveal" data-cat="heat">
+      <h4><span data-fa="💨 جابجایی — قانون نیوتن سرد کردن" data-en="💨 Convection — Newton's Law of Cooling">💨 جابجایی — قانون نیوتن</span></h4>
+      <div class="kb-formula">q = h·A·(T<sub>s</sub> − T<sub>∞</sub>)</div>
+      <p data-fa="ضریب جابجایی h با عدد نوسلت Nu = h·L/k و روابط تشابه (Re، Pr) تخمین زده می‌شود." data-en="Convection coefficient h is estimated via Nusselt number Nu = h·L/k and similarity relations (Re, Pr).">ضریب جابجایی h با عدد نوسلت Nu = h·L/k و روابط تشابه (Re و Pr) تخمین زده می‌شود.</p>
+    </div>
+    <div class="kb-card reveal" data-cat="heat">
+      <h4><span data-fa="☀️ تابش — استفان–بولتزمن" data-en="☀️ Radiation — Stefan–Boltzmann">☀️ تابش — استفان–بولتزمن</span></h4>
+      <div class="kb-formula">q = ε·σ·A·T⁴</div>
+      <p data-fa="σ = 5.67×10⁻⁸ W/(m²·K⁴). در کوره‌ها و راکتورهای داغ، تابش غالب‌ترین مکانیزم است." data-en="σ = 5.67×10⁻⁸ W/(m²·K⁴). In fired heaters and hot reactors, radiation dominates.">σ = 5.67×10⁻⁸ W/(m²·K⁴). در کوره‌ها و راکتورهای داغ، تابش غالب‌ترین مکانیزم است.</p>
+    </div>
+    <div class="kb-card reveal" data-cat="heat">
+      <h4><span data-fa="🔁 LMTD — طراحی مبدل حرارتی" data-en="🔁 LMTD — Exchanger Design">🔁 LMTD — طراحی مبدل حرارتی</span></h4>
+      <div class="kb-formula">ΔT(lm) = (ΔT₁ − ΔT₂) / ln(ΔT₁/ΔT₂)</div>
+      <p data-fa="اختلاف دمای متوسط لگاریتمی + معادله‌ی H = U·A·LMTD → مساحت لازم مبدل. ضریب F برای مبدل‌های چند-عبوری." data-en="Log mean temperature difference + Q = U·A·ΔT(lm) → required exchanger area. Correction factor F applies for multi-pass exchangers.">اختلاف دمای متوسط لگاریتمی + معادله‌ی Q = U·A·LMTD → مساحت لازم مبدل. ضریب F برای مبدل‌های چند-عبوری.</p>
+    </div>
+
+    <!-- ======== MASS ======== -->
+    <div class="kb-card reveal" data-cat="mass">
+      <h4><span data-fa="🚰 قانون اول فیک" data-en="🚰 Fick's First Law">🚰 قانون اول فیک</span></h4>
+      <div class="kb-formula">J = −D·(dC/dx)</div>
+      <p data-fa="پخش مولکولی از غلظت بالا به پایین؛ D ضریب پخش است. پایه‌ی طراحی برج‌های جذب و غشاها." data-en="Molecular diffusion from high to low concentration; D is the diffusivity. The basis of absorber and membrane design.">پخش مولکولی از غلظت بالا به پایین؛ D ضریب پخش است. پایه‌ی طراحی برج‌های جذب و غشاها.</p>
+    </div>
+    <div class="kb-card reveal" data-cat="mass">
+      <h4><span data-fa="🔗 تشابه‌ی انتقال جرم — عدد اشربت" data-en="🔗 Mass Transfer Analogy — Sherwood">🔗 تشابه‌ی انتقال جرم — عدد اشربت</span></h4>
+      <div class="kb-formula">Sh = k·L/D, &nbsp; Sc = μ/(ρ·D)</div>
+      <p data-fa="مثلث تشابه: Re (مومنتوم)، Pr (حرارت)، Sc (جرم) — یک‌بار فهمیدن، سه‌جا استفاده." data-en="The similarity triangle: Re (momentum), Pr (heat), Sc (mass) — learn once, apply three times.">مثلث تشابه: Re (مومنتوم)، Pr (حرارت)، Sc (جرم) — یک‌بار بفهم، سه‌جا استفاده کن.</p>
+    </div>
+    <div class="kb-card reveal" data-cat="mass">
+      <h4><span data-fa="🏗️ HTU و NTU" data-en="🏗️ HTU &amp;amp; NTU">🏗️ HTU و NTU</span></h4>
+      <div class="kb-formula">Z = (HTU) × (NTU)</div>
+      <p data-fa="ارتفاع متاحت تعداد واحد و تعد واحدها → ارتفاع برج پر-شده‌ی جذب یا تقطیر — روش اصلی طراحی برج‌های سپ-شده." data-en="Height of a Transfer Unit times Number of Transfer Units → packed column height; the main design method for packed absorbers.">ارتفاع معادل یک واحد انتقال × تعداد واحدها → ارتفاع برج پرشده — روش اصلی طراحی برج‌های پرشده‌ی جذب.</p>
+    </div>
+
+    <!-- ======== REACTORS ======== -->
+    <div class="kb-card reveal" data-cat="reac">
+      <h4><span data-fa="🔑 معادله‌ی آرنیوس" data-en="🔑 Arrhenius Equation">🔑 معادله‌ی آرنیوس</span></h4>
+      <div class="kb-formula">k = A·e^(−Ea / (R·T))</div>
+      <p data-fa="انرژی فعال‌سازی Ea کنترل‌کننده‌ی حساسیت سرعت به دماست — به همین دلیل کنترل دقیق دمای راکتور حیاتی است." data-en="Activation energy Ea controls how strongly rate depends on temperature — why reactors need precise control.">انرژی فعال‌سازی Ea کنترل‌کننده‌ی حساسیت سرعت به دماست — به همین دلیل کنترل دقیق دمای راکتور حیاتی است.</p>
+    </div>
+    <div class="kb-card reveal" data-cat="reac">
+      <h4><span data-fa="🎬 معادله‌ی سرعت واکنش" data-en="🎬 Rate Law">🎬 معادله‌ی سرعت واکنش</span></h4>
+      <div class="kb-formula">−r<sub>A</sub> = k·C<sub>A</sub><sup>n</sup></div>
+      <p data-fa="سرعت مصرف راکتور a از غلظت زنده به توان n — قلب طراحی هرReact." data-en="The rate of consumption of A depends on concentration raised to order n — the heart of every reactor design.">سرعت مصرف راکنت A به غلظت آن به توان n بستگی دارد — قلب طراحی هر راکتور.</p>
+    </div>
+    <div class="kb-card reveal" data-cat="reac">
+      <h4><span data-fa="⚙️ راکتورهای CSTR و PFR" data-en="⚙️ CSTR vs PFR">⚙️ راکتورهای CSTR و PFR</span></h4>
+      <div class="kb-formula">CSTR: τ = V/q &nbsp;|&nbsp; PFR: τ = ∫dC/−r</div>
+      <p data-fa="در CSTR مخلوط کامل است و غلظت خروجی با ورودی برابر؛ در PFR پروفایل تدریجی است — برای سینتیک مرتبه‌ی مثبت، PFR حجم کمتری می‌خواهد." data-en="CSTR is perfectly mixed with a single concentration; PFR has a gradual profile — for positive-order kinetics, PFR is smaller.">در CSTR مخلوط کامل است و غلظت خروجی با ورودی برابر؛ در PFR پروفایل تدریجی است — برای سینتیک مرتبه‌ی مثبت، PFR حجم کمتری می‌خواهد.</p>
+    </div>
+    <div class="kb-card reveal" data-cat="reac">
+      <h4><span data-fa="🎯 تبدیل، گزینشی و بازده" data-en="🎯 Conversion, Selectivity &amp;amp; Yield">🎯 تبدیل، گزینشی و بازده</span></h4>
+      <div class="kb-formula">X = (F(in) − F(out)) / F(in), &nbsp; S = F(desired) / F(waste)</div>
+      <p data-fa="نه تبدش X و نه گزینش به‌تنهایی کافی نیست؛ باید تعادل بین دو‌ش را جست: بازده = تبدیل × گزینشی." data-en="Neither conversion nor selectivity alone is enough; yield = conversion × selectivity ties them together.">نه تبدیل X و نه گزینش به‌تنهایی کافی نیستند؛ بازده = تبدیل × گزینش این دو را به هم پیوند می‌دهد.</p>
+    </div>
+
+    <!-- ======== SEPARATIONS ======== -->
+    <div class="kb-card reveal" data-cat="sep">
+      <h4><span data-fa="⚖️ قانون رائولت و فعالیت" data-en="⚖️ Raoult's Law &amp;amp; Activity">⚖️ قانون رائولت و فعالیت</span></h4>
+      <div class="kb-formula">p(i) = x(i)·γ(i)·P(i)(sat)</div>
+      <p data-fa="فشار جزئی هر جزء در تعادل بخار–مایع. γ ≠ 1 برای مخلوط‌های غیرایده‌ای — جایی که HYSYS اهمیت پیدا می‌کند." data-en="Partial pressure of each component in vapor–liquid equilibrium. γ ≠ 1 for non-ideal mixtures — where HYSYS earns its keep.">فشار جزئی هر جزء در تعادل بخار–مایع. γ ≠ 1 برای مخلوط‌های غیرایده‌ای — جایی که HYSYS اهمیت پیدا می‌کند.</p>
+    </div>
+    <div class="kb-card reveal" data-cat="sep">
+      <h4><span data-fa="🗡️ متد McCabe–Thiele" data-en="🗡️ McCabe–Thiele Method">🗡️ متد McCabe–Thiele</span></h4>
+      <div class="kb-formula">y = m·x + b &nbsp;(operating line)</div>
+      <p data-fa="روش گرافیکی پله‌زنی برای شمارش سینی‌های برج با فرض سرریز مولی ثابت — پروژه‌ی کلاسیک درس عملیات واحد." data-en="Step-off graphical method to count stages at constant molal overflow — the classic unit operations project.">روش گرافیکی پله‌زنی برای شمارش سینی‌ها با فرض سرریز مولی ثابت — پروژه‌ی کلاسیک درس عملیات واحد.</p>
+    </div>
+    <div class="kb-card reveal" data-cat="sep">
+      <h4><span data-fa="🏭 روش‌های Fenske–Underwood–Gilliland" data-en="🏭 Fenske–Underwood–Gilliland">🏭 روش‌های Fenske–Underwood–Gilliland</span></h4>
+      <div class="kb-formula">N(min) → R(min) → N(theoretical)</div>
+      <p data-fa="سه بلند زنجیره: سینی حداقل، برگشت حداقل، تعداد سینی واقعی — برآورد سریع برج قبل از شبیه‌سازی دقیق." data-en="A three-step chain: minimum stages, minimum reflux, actual stages — the quick estimate before rigorous simulation.">سه‌گانه‌ی زنجیره‌ای: سینی حداقل، برگشت حداقل، تعداد سینی واقعی — برآورد سریع پیش از شبیه‌سازی دقیق.</p>
+    </div>
+
+    <!-- ======== CONTROL & SAFETY ======== -->
+    <div class="kb-card reveal" data-cat="ctrl">
+      <h4><span data-fa="🎛️ کنترل‌کننده‌ی PID" data-en="🎛️ PID Controller">🎛️ کنترل‌کننده‌ی PID</span></h4>
+      <div class="kb-formula">u(t) = K(p)·e + K(i)·&int;e·dτ + K(d)·de/dt</div>
+      <p data-fa="سه کف حر، تعابیر لغز وقفه، مشتق — قلب ۹۰٪ حلقه‌های کنترل صنعت از دما تا فشار." data-en="Proportional, integral and derivative actions — the heart of 90% of industrial control loops, from temperature to pressure.">عمل‌های تناسبی، انتگرالی و مشتقی — قلب ۹۰٪ حلقه‌های کنترل صنعت، از دما تا فشار.</p>
+    </div>
+    <div class="kb-card reveal" data-cat="ctrl">
+      <h4><span data-fa="🔄 حلقه‌ی کنترل و نمادها" data-en="🔄 Control Loop &amp;amp; Symbols">🔄 حلقه‌ی کنترل و نمادها</span></h4>
+      <div class="kb-formula">Sensor → Controller → Final element</div>
+      <p data-fa="حلقه‌ی بسته: حسگر (TT) → کنترلر (TIC) → شیر کنترل — و زبان مشترک PFD و P&amp;ID که همه‌ی تیم می‌فهمد." data-en="Closed loop: sensor (TT) → controller (TIC) → actuator (valve) — plus the shared language of PFD and P&amp;ID drawings.">حلقه‌ی بسته: حسگر (TT) → کنترلر (TIC) → عملگر (شیر) — به‌علاوه زبان مشترک نقشه‌های PFD و P&amp;ID.</p>
+    </div>
+    <div class="kb-card reveal" data-cat="ctrl">
+      <h4><span data-fa="🛡️ ایمنی فرآیند — HAZOP و PSV" data-en="🛡️ Process Safety — HAZOP &amp;amp; PSV">🛡️ ایمنی فرآیند — HAZOP و PSV</span></h4>
+      <div class="kb-formula">LOPA layers → tole risk</div>
+      <p data-fa="HAZOP سناریوهای انحراف از حالت سالم را نظام‌مند پیدا می‌کند؛ لایه‌های حفاظتی — شیر ایمنی PSV آخرین سد پیش از فاجعه است." data-en="HAZOP systematically hunts deviant scenarios; protective layers — the PSV relief valve is the last barrier before disaster.">HAZOP سناریوهای انحراف را سیستماتیک پیدا می‌کند؛ لایه‌های حفاظتی — شیر ایمنی PSV آخرین سد پیش از فاجعه است.</p>
+    </div>
+  </div>
+
+  <!-- ======== CONSTANTS ======== -->
+  <h3 class="reveal" style="font-size:1.35rem;font-weight:800;margin-top:3rem"><span data-fa="🔢 ثابت‌های مهندسی که باید حفظ باشی" data-en="🔢 Constants Every Engineer Knows">🔢 ثابت‌های مهندسی که باید حفظ باشی</span></h3>
+  <div class="consts-wrap reveal">
+    <table class="const-table">
+      <thead><tr><th data-fa="ثابت" data-en="Constant">ثابت</th><th data-fa="نماد" data-en="Symbol">نماد</th><th data-fa="مقدار استاندارد" data-en="Standard value">مقدار استاندارد</th></tr></thead>
+      <tbody id="constBody">
+        <tr><td data-fa="ثابت عمومی گازها" data-en="Universal gas constant">ثابت عمومی گازها</td><td>R</td><td>8.314 J/(mol·K)</td></tr>
+        <tr><td data-fa="عدد آووگادرو" data-en="Avogadro number">عدد آووگادرو</td><td>N<sub>A</sub></td><td>6.022×10²³ mol⁻¹</td></tr>
+        <tr><td data-fa="شتاب جاذبه" data-en="Gravitational acceleration">شتاب جاذبه</td><td>g</td><td>9.807 m/s²</td></tr>
+        <tr><td data-fa="ثابت استفان–بولتزمن" data-en="Stefan–Boltzmann constant">ثابت استفان–بولتزمن</td><td>σ</td><td>5.670×10⁻⁸ W/(m²·K⁴)</td></tr>
+        <tr><td data-fa="فشار استاندارد اتمسفر" data-en="Standard atmosphere">فشار استاندارد اتمسفر</td><td>1 atm</td><td>101 325 Pa</td></tr>
+        <tr><td data-fa="سرعت صوت در هوا (۲۰&deg;C)" data-en="Speed of sound in air (20&amp;deg;C)">سرعت صوت در هوا (۲۰°C)</td><td>v<sub>s</sub></td><td>343 m/s</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ======== CONVERTER ======== -->
+  <h3 class="reveal" style="font-size:1.35rem;font-weight:800;margin-top:3rem"><span data-fa="🧮 مبدل واحدهای مهندسی" data-en="🧮 Engineering Unit Converter">🧮 مبدل واحدهای مهندسی</span></h3>
+  <p class="section-sub reveal" style="margin-bottom:1.5rem" data-fa="دو ابزار پرکاربرد روزمره — دما و فشار" data-en="Two daily-driver tools — temperature and pressure">دو ابزار پرکاربرد روزمره — دما و فشار</p>
+  <div class="convert-grid">
+    <div class="convert-card reveal">
+      <h4>🌡️ <span data-fa="تبدیل دما" data-en="Temperature">تبدیل دما</span></h4>
+      <div class="conv-row">
+        <input type="number" id="tempIn" value="25" step="any">
+        <select id="tempFrom">
+          <option value="C">°C</option><option value="K">K</option><option value="F">°F</option>
+        </select>
+        <span class="conv-eq" data-fa="به" data-en="→">به</span>
+        <select id="tempTo">
+          <option value="K" selected>K</option><option value="C">°C</option><option value="F">°F</option>
+        </select>
+      </div>
+      <div class="conv-result" id="tempOut">298.15 K</div>
+    </div>
+    <div class="convert-card reveal">
+      <h4>🎈 <span data-fa="تبدیل فشار" data-en="Pressure">تبدیل فشار</span></h4>
+      <div class="conv-row">
+        <input type="number" id="pressIn" value="1" step="any">
+        <select id="pressFrom">
+          <option value="atm">atm</option><option value="bar">bar</option><option value="kPa">kPa</option><option value="psi">psi</option>
+        </select>
+        <span class="conv-eq" data-fa="به" data-en="→">به</span>
+        <select id="pressTo">
+          <option value="kPa" selected>kPa</option><option value="atm">atm</option><option value="bar">bar</option><option value="psi">psi</option>
+        </select>
+      </div>
+      <div class="conv-result" id="pressOut">101.325 kPa</div>
+    </div>
+  </div>
+
+  <!-- ======== ROADMAP ======== -->
+  <h3 class="reveal" style="font-size:1.35rem;font-weight:800;margin-top:3rem"><span data-fa="🗺️ نقشه‌ی راه یک مهندس شیمی (۸ ترم)" data-en="🗺️ A ChemEng Roadmap (8 Semesters)">🗺️ نقشه‌ی راه یک مهندس شیمی (۸ ترم)</span></h3>
+  <div class="roadmap">
+    <div class="rm-group reveal">
+      <h4 data-fa="🧱 ترم ۱–۲ | پایه‌ها" data-en="🧱 Sem 1–2 | Foundations">🧱 ترم ۱–۲ | پایه‌ها</h4>
+      <ul>
+        <li data-fa="ریاضی ۱ و ۲ — دیفرانسیل و انتگرال" data-en="Calculus 1 &amp;amp; 2">ریاضی ۱ و ۲ — دیفرانسیل و انتگرال</li>
+        <li data-fa="شیمی عمومی" data-en="General Chemistry">شیمی عمومی</li>
+        <li data-fa="فیزیک ۱" data-en="Physics 1">فیزیک ۱</li>
+        <li data-fa="رسم فنی و محاسبات کامپیوتری" data-en="Engineering drawing &amp;amp; computing">رسم فنی و محاسبات کامپیوتری</li>
+      </ul>
+    </div>
+    <div class="rm-group reveal">
+      <h4 data-fa="⚙️ ترم ۳–۴ | ستون‌های اصلی" data-en="⚙️ Sem 3–4 | Core Foundations">⚙️ ترم ۳–۴ | ستون‌های اصلی</h4>
+      <ul>
+        <li data-fa="محاسبات مهندسی (مبانی مهندسی شیمی)" data-en="Engineering calculations">محاسبات مهندسی (مبانی مهندسی شیمی)</li>
+        <li data-fa="ترمودینامیک ۱" data-en="Thermodynamics 1">ترمودینامیک ۱</li>
+        <li data-fa="مکانیک سیالات (انتقال مومنتوم)" data-en="Fluid mechanics (momentum)">مکانیک سیالات (انتقال مومنتوم)</li>
+        <li data-fa="شیمی فیزیک" data-en="Physical chemistry">شیمی فیزیک</li>
+      </ul>
+    </div>
+    <div class="rm-group reveal">
+      <h4 data-fa="🏭 ترم ۵–۶ | قلب مهندسی فرآیند" data-en="🏭 Sem 5–6 | Heart of Process Engineering">🏭 ترم ۵–۶ | قلب مهندسی فرآیند</h4>
+      <ul>
+        <li data-fa="ترمودینامیک ۲ و انتقال حرارت" data-en="Thermo 2 &amp;amp; heat transfer">ترمودینامیک ۲ و انتقال حرارت</li>
+        <li data-fa="عملیات واحد ۱ و ۲" data-en="Unit operations 1 &amp;amp; 2">عملیات واحد ۱ و ۲</li>
+        <li data-fa="انتقال جرم" data-en="Mass transfer">انتقال جرم</li>
+        <li data-fa="شبیه‌سازی HYSYS / Aspen Plus" data-en="HYSYS / Aspen Plus simulation">شبیه‌سازی HYSYS / Aspen Plus</li>
+      </ul>
+    </div>
+    <div class="rm-group reveal">
+      <h4 data-fa="🎓 ترم ۷–۸ | خروج به صنعت" data-en="🎓 Sem 7–8 | Industrial Launch">🎓 ترم ۷–۸ | خروج به صنعت</h4>
+      <ul>
+        <li data-fa="کنترل فرآیند" data-en="Process control">کنترل فرآیند</li>
+        <li data-fa="طراحی و سنتز فرآیند" data-en="Process design &amp;amp; synthesis">طراحی و سنتز فرآیند</li>
+        <li data-fa="ایمنی فرآیند و HAZOP" data-en="Process safety &amp;amp; HAZOP">ایمنی فرآیند و HAZOP</li>
+        <li data-fa="کارآموزی صنعتی + پروژه‌ی پایانی" data-en="Industrial internship + capstone">کارآموزی صنعتی + پروژه‌ی پایانی</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -593,6 +899,61 @@ function typeLoop(){
 }
 function startTyping(){ clearTimeout(timer); ci = 0; deleting = false; pi = 0; typeLoop(); }
 startTyping();
+
+/* ---------- Knowledge Library: tabs + live search ---------- */
+const kbSearch = document.getElementById('kbSearch');
+const kbCards = Array.from(document.querySelectorAll('.kb-card'));
+const kbChips = Array.from(document.querySelectorAll('.tabs .chip'));
+let activeTab = 'all';
+
+function applyFilter(){
+  const q = kbSearch.value.trim().toLowerCase();
+  kbCards.forEach(card=>{
+    const matchTab = activeTab === 'all' || card.dataset.cat === activeTab;
+    const matchQ = !q || card.textContent.toLowerCase().includes(q);
+    card.classList.toggle('hide', !(matchTab && matchQ));
+  });
+}
+kbChips.forEach(chip=>{
+  chip.addEventListener('click',()=>{
+    kbChips.forEach(c=>c.classList.remove('active'));
+    chip.classList.add('active');
+    activeTab = chip.dataset.filter;
+    applyFilter();
+  });
+});
+kbSearch.addEventListener('input', applyFilter);
+
+/* ---------- Unit converters ---------- */
+function smartNum(x){
+  if(!isFinite(x)) return '—';
+  return Math.abs(x) >= 1e5 || (Math.abs(x) < 1e-4 && x !== 0)
+    ? x.toExponential(4).replace('e',' × 10^')
+    : +x.toPrecision(6) + '';
+}
+const tempConv = (v, f, t) => {
+  const c = (f === 'C') ? v : (f === 'K') ? v - 273.15 : (v - 32) * 5 / 9;
+  return (t === 'C') ? c : (t === 'K') ? c + 273.15 : c * 9 / 5 + 32;
+};
+const PRESS = { Pa:1, kPa:1e3, bar:1e5, atm:101325, psi:6894.757 };
+const pressConv = (v, f, t) => v * PRESS[f] / PRESS[t];
+
+function bindConv(inId, fromId, toId, outId, fn){
+  const cf = ()=>{
+    const v = parseFloat(document.getElementById(inId).value);
+    const f = document.getElementById(fromId).value;
+    const t = document.getElementById(toId).value;
+    document.getElementById(outId).textContent =
+      isNaN(v) ? '—' : smartNum(fn(v, f, t)) + ' ' + t.replace('C','°C').replace('F','°F').replace('K','K');
+  };
+  document.getElementById(inId).addEventListener('input', cf);
+  document.getElementById(fromId).addEventListener('change', cf);
+  document.getElementById(toId).addEventListener('change', cf);
+  cf();
+}
+bindConv('tempIn','tempFrom','tempTo','tempOut', tempConv);
+bindConv('pressIn','pressFrom','pressTo','pressOut', pressConv);
+
 
 </script>
 </body>
