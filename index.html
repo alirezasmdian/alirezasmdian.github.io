@@ -910,7 +910,11 @@ function applyFilter(){
   const q = kbSearch.value.trim().toLowerCase();
   kbCards.forEach(card=>{
     const matchTab = activeTab === 'all' || card.dataset.cat === activeTab;
-    const matchQ = !q || card.textContent.toLowerCase().includes(q);
+    let hay = card.textContent;
+    card.querySelectorAll('[data-fa],[data-en]').forEach(el=>{
+      hay += ' ' + (el.dataset.fa || '') + ' ' + (el.dataset.en || '');
+    });
+    const matchQ = !q || hay.toLowerCase().includes(q);
     card.classList.toggle('hide', !(matchTab && matchQ));
   });
 }
