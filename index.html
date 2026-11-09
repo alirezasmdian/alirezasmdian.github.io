@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>علیرضا صمدیان آزاد | دانشجوی مهندسی شیمی | Alireza Samadian Azad</title>
+
+<!-- ======== SEO ======== -->
+<meta name="description" content="وب‌سایت شخصی علیرضا صمدیان آزاد، دانشجوی کارشناسی مهندسی شیمی دانشگاه صنعتی قوچان — مهارت‌ها، رزومه و نمونه کارها | Personal website of Alireza Samadian Azad, Chemical Engineering student at Quchan University of Technology — skills, resume and projects">
+<meta name="keywords" content="علیرضا صمدیان آزاد, Alireza Samadian Azad, دانشجوی مهندسی شیمی, Chemical Engineering Student, مهندسی شیمی قوچان, دانشگاه صنعتی قوچان, Quchan University of Technology, Aspen HYSYS, Aspen Plus, بوشهر, رزومه مهندسی شیمی">
+<meta name="author" content="علیرضا صمدیان آزاد (Alireza Samadian Azad)">
+<meta name="robots" content="index, follow">
+<meta name="google" content="notranslate">
+<link rel="canonical" href="./">
+
+<!-- Open Graph (پیش‌نمایش به‌هنگام اشتراک در واتساپ / تلگرام / گوگل) -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="علیرضا صمدیان آزاد | Alireza Samadian Azad — دانشجوی مهندسی شیمی">
+<meta property="og:description" content="دانشجوی مهندسی شیمی — مهارت‌ها، رزومه و نمونه کارها | Chemical Engineering student — skills, resume &amp; projects">
+<meta property="og:image" content="profile.jpg">
+<meta property="og:image:alt" content="Alireza Samadian Azad — profile photo">
+<meta property="og:locale" content="fa_IR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="علیرضا صمدیان آزاد | Alireza Samadian Azad">
+<meta name="twitter:description" content="مهارت‌ها، رزومه و نمونه کارهای یک دانشجوی مهندسی شیمی | Skills, resume &amp; projects of a chemical engineering student">
+<meta name="twitter:image" content="profile.jpg">
+
+<!-- Icons -->
+<link rel="icon" type="image/jpeg" href="profile.jpg">
+<link rel="apple-touch-icon" href="profile.jpg">
+
+<!-- ======== Structured Data: Google علامت‌گذاری شخص ======== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "علیرضا صمدیان آزاد",
+  "alternateName": ["Alireza Samadian Azad", "Ali Reza Samadian Azad", "Alireza Samadian", "alirezasmdian"],
+  "jobTitle": "Chemical Engineering Student",
+  "description": "Undergraduate student in chemical engineering at Quchan University of Technology, specializing in process simulation with Aspen HYSYS / Aspen Plus, MATLAB and AutoCAD.",
+  "gender": "male",
+  "nationality": { "@type": "Country", "name": "Iran" },
+  "homeLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressRegion": "Bushehr", "addressCountry": "IR" } },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Quchan University of Technology" },
+  "knowsLanguage": ["fa", "en"],
+  "knowsAbout": ["Chemical Engineering", "Process Simulation", "Aspen HYSYS", "Aspen Plus", "MATLAB", "Thermodynamics", "Unit Operations", "Distillation", "Fluid Mechanics"],
+  "sameAs": ["https://instagram.com/alirezasmdian"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fafafa;
+    --bg-alt:#f0f1f4;
+    --card:#ffffff;
+    --text:#181c24;
+    --text-soft:#5c6470;
+    --accent:#2563eb;
+    --accent-soft:#dbe6ff;
+    --border:#e5e7ec;
+    --shadow:0 10px 40px rgba(24,28,36,.07);
+    --radius:18px;
+  }
+  html.dark{
+    --bg:#0e1117;
+    --bg-alt:#141821;
+    --card:#1a1f2b;
+    --text:#e8eaf0;
+    --text-soft:#9aa3b2;
+    --accent:#5b8cff;
+    --accent-soft:#1d2a4a;
+    --border:#242b39;
+    --shadow:0 10px 40px rgba(0,0,0,.4);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Vazirmatn","Inter",sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.8;
+    transition:background .3s,color .3s;
+    overflow-x:hidden;
+  }
+  html[lang="en"] body{font-family:"Inter","Vazirmatn",sans-serif}
+
+  /* ---------- Header ---------- */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    background:color-mix(in srgb,var(--bg) 80%,transparent);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--border);
+  }
+  .nav{
+    max-width:1100px;margin:0 auto;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:.8rem 1.5rem;
+  }
+  .logo{font-weight:800;font-size:1.15rem;color:var(--text);text-decoration:none;display:flex;align-items:center;gap:.5rem}
+  .logo span{color:var(--accent)}
+  .nav-links{display:flex;gap:1.6rem;align-items:center;list-style:none}
+  .nav-links a{
+    color:var(--text-soft);text-decoration:none;font-weight:500;font-size:.95rem;
+    transition:color .2s;
+  }
+  .nav-links a:hover{color:var(--accent)}
+  .nav-tools{display:flex;gap:.6rem;align-items:center}
+  .tool-btn{
+    background:var(--bg-alt);border:1px solid var(--border);color:var(--text);
+    width:38px;height:38px;border-radius:12px;cursor:pointer;font-size:.95rem;
+    font-family:inherit;font-weight:600;
+    display:flex;align-items:center;justify-content:center;
+    transition:all .2s;flex-shrink:0;
+  }
+  .tool-btn:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+  .menu-toggle{display:none}
+  .menu-toggle svg{width:20px;height:20px}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    min-height:100vh;
+    max-width:1100px;margin:0 auto;
+    display:flex;align-items:center;gap:3rem;
+    padding:7rem 1.5rem 3rem;
+  }
+  .hero-text{flex:1}
+  .hero-badge{
+    display:inline-flex;align-items:center;gap:.5rem;
+    background:var(--accent-soft);color:var(--accent);
+    padding:.35rem 1rem;border-radius:999px;
+    font-size:.85rem;font-weight:600;margin-bottom:1.2rem;
+  }
+  .hero-badge .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:800;line-height:1.35;margin-bottom:.6rem}
+  .hero h1 em{font-style:normal;color:var(--accent)}
+  .hero-sub{
+    font-size:1.15rem;color:var(--text-soft);margin-bottom:1.6rem;max-width:32rem;
+  }
+  .typing{
+    color:var(--accent);font-weight:700;
+    border-inline-end:2px solid var(--accent);
+    padding-inline-end:4px;
+  }
+  .hero-cta{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
+  .btn{
+    display:inline-flex;align-items:center;gap:.5rem;
+    padding:.75rem 1.7rem;border-radius:14px;
+    text-decoration:none;font-weight:600;font-size:1rem;
+    transition:all .25s;cursor:pointer;border:none;font-family:inherit;
+  }
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 8px 24px rgba(37,99,235,.3)}
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(37,99,235,.4)}
+  .btn-ghost{background:transparent;color:var(--text);border:1.5px solid var(--border)}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+  .hero-photo{flex-shrink:0;position:relative}
+  .photo-frame{
+    width:300px;height:300px;border-radius:50%;
+    padding:8px;
+    background:linear-gradient(135deg,var(--accent),#7c3aed 60%,#ec4899);
+    box-shadow:var(--shadow);
+    animation:float 6s ease-in-out infinite;
+  }
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+  .photo-frame img{
+    width:100%;height:100%;border-radius:50%;object-fit:cover;
+    background:#fff;display:block;
+  }
+  .hero-stats{
+    display:flex;gap:2.2rem;margin-top:2.6rem;
+  }
+  .stat b{font-size:1.7rem;color:var(--accent);display:block;line-height:1.3}
+  .stat small{color:var(--text-soft);font-size:.85rem}
+
+  /* ---------- Sections ---------- */
+  section{max-width:1100px;margin:0 auto;padding:5.5rem 1.5rem 0}
+  .section-title{
+    font-size:1.9rem;font-weight:800;margin-bottom:.4rem;
+    display:flex;align-items:center;gap:.7rem;
+  }
+  .section-title::before{content:"";width:34px;height:4px;border-radius:4px;background:var(--accent)}
+  .section-sub{color:var(--text-soft);margin-bottom:2.6rem}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:2rem}
+  .about-card{
+    background:var(--card);border:1px solid var(--border);
+    border-radius:var(--radius);padding:1.8rem;box-shadow:var(--shadow);
+  }
+  .about-card p{color:var(--text-soft)}
+  .info-list{display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.4rem;list-style:none}
+  .info-list li{display:flex;align-items:center;gap:.6rem;color:var(--text-soft);font-size:.95rem}
+  .info-list b{color:var(--text);font-weight:600}
+  .info-list .ic{color:var(--accent);flex-shrink:0}
+
+  /* Skills */
+  .skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.2rem}
+  .skill-card{
+    background:var(--card);border:1px solid var(--border);
+    border-radius:var(--radius);padding:1.3rem 1.5rem;
+    transition:all .25s;
+  }
+  .skill-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:var(--accent)}
+  .skill-head{display:flex;align-items:center;gap:.75rem;margin-bottom:.7rem}
+  .skill-head .ic{color:var(--accent);flex-shrink:0}
+  .skill-head h3{font-size:1.02rem;font-weight:700}
+  .bar{height:7px;background:var(--bg-alt);border-radius:8px;overflow:hidden}
+  .bar i{
+    display:block;height:100%;border-radius:8px;width:0;
+    background:linear-gradient(90deg,var(--accent),#7c3aed);
+    transition:width 1.2s cubic-bezier(.2,.7,.3,1);
+  }
+  .skill-card span{font-size:.8rem;color:var(--text-soft)}
+
+  /* Timeline */
+  .timeline{position:relative;padding-inline-start:2rem}
+  .timeline::before{
+    content:"";position:absolute;inset-inline-start:7px;top:8px;bottom:8px;
+    width:2px;background:var(--border);
+  }
+  .tl-item{position:relative;padding-bottom:2.2rem}
+  .tl-item:last-child{padding-bottom:0}
+  .tl-item::before{
+    content:"";position:absolute;inset-inline-start:-2rem;top:8px;
+    width:16px;height:16px;border-radius:50%;
+    background:var(--bg);border:3.5px solid var(--accent);
+  }
+  .tl-date{color:var(--accent);font-weight:700;font-size:.9rem}
+  .tl-item h3{font-size:1.15rem;font-weight:700;margin:.2rem 0}
+  .tl-item h4{color:var(--text-soft);font-weight:600;font-size:.98rem;margin-bottom:.3rem}
+  .tl-item p{color:var(--text-soft);font-size:.95rem;max-width:42rem}
+
+  /* Portfolio */
+  .proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.4rem}
+  .proj{
+    background:var(--card);border:1px solid var(--border);
+    border-radius:var(--radius);overflow:hidden;
+    transition:all .25s;display:flex;flex-direction:column;
+  }
+  .proj:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .proj-banner{
+    height:150px;display:flex;align-items:center;justify-content:center;
+    font-size:3rem;
+  }
+  .proj-body{padding:1.3rem 1.4rem;flex:1;display:flex;flex-direction:column}
+  .proj-body h3{font-size:1.12rem;font-weight:700;margin-bottom:.4rem}
+  .proj-body p{color:var(--text-soft);font-size:.93rem;flex:1}
+  .tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem}
+  .tag{
+    background:var(--accent-soft);color:var(--accent);
+    font-size:.75rem;font-weight:600;padding:.2rem .7rem;border-radius:999px;
+  }
+
+  /* Contact / Footer */
+  .contact-box{
+    background:linear-gradient(135deg,var(--accent),#7c3aed);
+    border-radius:24px;padding:3rem 2rem;text-align:center;color:#fff;
+    margin-top:4rem;
+  }
+  .contact-box h2{font-size:1.8rem;font-weight:800;margin-bottom:.5rem}
+  .contact-box p{opacity:.85;margin-bottom:1.6rem}
+  .socials{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+  .social{
+    display:inline-flex;align-items:center;gap:.55rem;
+    background:rgba(255,255,255,.15);color:#fff;text-decoration:none;
+    padding:.7rem 1.5rem;border-radius:14px;font-weight:600;
+    transition:all .25s;
+  }
+  .social:hover{background:#fff;color:var(--accent);transform:translateY(-3px)}
+  footer{
+    text-align:center;color:var(--text-soft);font-size:.9rem;
+    padding:3rem 1rem 2.2rem;
+  }
+  footer b{color:var(--text)}
+
+  /* Reveal animation */
+  .reveal{opacity:0;transform:translateY(34px);transition:all .8s cubic-bezier(.2,.7,.3,1)}
+  .reveal.show{opacity:1;transform:none}
+
+  @media(max-width:860px){
+    .hero{flex-direction:column-reverse;text-align:center;padding-top:6.5rem;gap:2rem}
+    .hero-cta,.hero-stats{justify-content:center}
+    .hero-sub{margin-inline:auto}
+    .about-grid{grid-template-columns:1fr}
+    .photo-frame{width:230px;height:230px}
+    .nav-links{
+      position:fixed;top:62px;inset-inline:0;
+      background:var(--bg);border-bottom:1px solid var(--border);
+      flex-direction:column;padding:1.2rem;gap:1rem;
+      display:none;
+    }
+    .nav-links.open{display:flex}
+    .menu-toggle{display:flex}
+    .info-list{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a class="logo" href="#home">علیرضا<span>.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">🏠 <span data-fa="خانه" data-en="Home">خانه</span></a></li>
+      <li><a href="#about">👋 <span data-fa="درباره من" data-en="About">درباره من</span></a></li>
+      <li><a href="#skills">⚡ <span data-fa="مهارت‌ها" data-en="Skills">مهارت‌ها</span></a></li>
+      <li><a href="#resume">📄 <span data-fa="رزومه" data-en="Resume">رزومه</span></a></li>
+      <li><a href="#projects">💼 <span data-fa="نمونه کارها" data-en="Projects">نمونه کارها</span></a></li>
+    </ul>
+    <div class="nav-tools">
+      <button class="tool-btn" id="langBtn" title="Switch language">EN</button>
+      <button class="tool-btn" id="themeBtn" title="Toggle theme">🌙</button>
+      <button class="tool-btn menu-toggle" id="menuBtn" title="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="hero-text">
+    <div class="hero-badge"><span class="dot"></span><span data-fa="آماده‌ی همکاری و یادگیری" data-en="Open to work &amp; learning">آماده‌ی همکاری و یادگیری</span></div>
+    <h1>
+      <span data-fa="سلام! من" data-en="Hi, I'm">سلام! من</span>
+      <em data-fa="علیرضا صمدیان آزاد" data-en="Alireza Samadian Azad">علیرضا صمدیان آزاد</em>
+      <span data-fa="هستم 👋" data-en="👋">هستم 👋</span>
+    </h1>
+    <p class="hero-sub">
+      <span data-fa="دانشجوی مهندسی شیمی، علاقه‌مند به فرآیندها، شبیه‌سازی و طراحی واحدهای صنعتی. راستش…" data-en="Chemical Engineering student, passionate about processes, simulation and plant design. Honestly…">دانشجوی مهندسی شیمی، علاقه‌مند به فرآیندها، شبیه‌سازی و طراحی واحدهای صنعتی. راستش…</span>
+      <span class="typing" id="typing"></span>
+    </p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#projects" data-fa="دیدن نمونه کارها 🚀" data-en="View my projects 🚀">دیدن نمونه کارها 🚀</a>
+      <a class="btn btn-ghost social-ig" href="https://instagram.com/alirezasmdian" target="_blank" rel="noopener" data-fa="اینستاگرام من" data-en="My Instagram">اینستاگرام من</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><b data-fa="ترم ۶" data-en="6th Sem">ترم ۶</b><small data-fa="مهندسی شیمی" data-en="Chemical Eng.">مهندسی شیمی</small></div>
+      <div class="stat"><b data-fa="+۴" data-en="4+">+۴</b><small data-fa="نرم‌افزار تخصصی" data-en="Eng. tools">نرم‌افزار تخصصی</small></div>
+      <div class="stat"><b data-fa="+۵" data-en="5+">+۵</b><small data-fa="پروژه درسی" data-en="Course projects">پروژه درسی</small></div>
+    </div>
+  </div>
+  <div class="hero-photo reveal show">
+    <div class="photo-frame"><img src="profile.jpg" alt="Alireza Samadian Azad"></div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <h2 class="section-title reveal" data-fa="درباره من" data-en="About Me">درباره من</h2>
+  <p class="section-sub reveal" data-fa="یه آشنایی کوتاه از خودم" data-en="A quick introduction">یه آشنایی کوتاه از خودم</p>
+  <div class="about-grid">
+    <div class="about-card reveal">
+      <p data-fa="من علیرضا صمدیان آزاد هستم؛ ۲۱ ساله، اهل استان بوشهر و در حال حاضر دانشجوی کارشناسی مهندسی شیمی در دانشگاه صنعتی قوچان (ترم ۶). از دوران دانشگاه سعی کردم فقط به درس اکتفا نکنم و با نرم‌افزارهای تخصصی رشته‌م مثل Aspen HYSYS، Aspen Plus و MATLAB کار عملی رو یاد بگیرم. به شبیه‌سازی فرآیندها، موازنه‌ی مواد و انرژی و طراحی واحدهای شیمیایی علاقه‌ی زیادی دارم و به دنبال فرصت‌های کارآموزی و پروژه‌های واقعی صنعتی هستم." data-en="I'm Alireza Samadian Azad — a 21-year-old from Bushehr province, currently in my 6th semester of Chemical Engineering at Quchan University of Technology. Beyond the classroom, I've focused on hands-on experience with industry tools like Aspen HYSYS, Aspen Plus and MATLAB. I'm truly passionate about process simulation, mass &amp; energy balances and the design of chemical process units, and I'm always looking for internship and real-world project opportunities.">
+        من علیرضا صمدیان آزاد هستم؛ ۲۱ ساله، اهل استان بوشهر و در حال حاضر دانشجوی کارشناسی مهندسی شیمی در دانشگاه صنعتی قوچان (ترم ۶). از دوران دانشگاه سعی کردم فقط به درس اکتفا نکنم و با نرم‌افزارهای تخصصی رشته‌م مثل Aspen HYSYS، Aspen Plus و MATLAB کار عملی رو یاد بگیرم. به شبیه‌سازی فرآیندها، موازنه‌ی مواد و انرژی و طراحی واحدهای شیمیایی علاقه‌ی زیادی دارم و به دنبال فرصت‌های کارآموزی و پروژه‌های واقعی صنعتی هستم.
+      </p>
+    </div>
+    <div class="about-card reveal">
+      <ul class="info-list">
+        <li><span class="ic">🎓</span><b data-fa="مقطع:" data-en="Degree:">مقطع:</b>&nbsp;<span data-fa="کارشناسی مهندسی شیمی" data-en="B.Sc. Chemical Eng.">کارشناسی مهندسی شیمی</span></li>
+        <li><span class="ic">🏫</span><b data-fa="دانشگاه:" data-en="University:">دانشگاه:</b>&nbsp;<span data-fa="صنعتی قوچان" data-en="Quchan Univ. of Tech.">صنعتی قوچان</span></li>
+        <li><span class="ic">📍</span><b data-fa="استان:" data-en="Home:">استان:</b>&nbsp;<span data-fa="بوشهر، ایران" data-en="Bushehr, Iran">بوشهر، ایران</span></li>
+        <li><span class="ic">🎂</span><b data-fa="سن:" data-en="Age:">سن:</b>&nbsp;<span data-fa="۲۱ سال" data-en="21 years">۲۱ سال</span></li>
+        <li><span class="ic">🗣️</span><b data-fa="زبان:" data-en="Language:">زبان:</b>&nbsp;<span data-fa="فارسی + انگلیسی فنی" data-en="Persian + technical English">فارسی + انگلیسی فنی</span></li>
+        <li><span class="ic">💼</span><b data-fa="وضعیت:" data-en="Status:">وضعیت:</b>&nbsp;<span data-fa="جویای کارآموزی" data-en="Seeking internship">جویای کارآموزی</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills">
+  <h2 class="section-title reveal" data-fa="مهارت‌ها" data-en="Skills">مهارت‌ها</h2>
+  <p class="section-sub reveal" data-fa="نرم‌افزارها و دانش‌های تخصصی که باهاشون کار می‌کنم" data-en="The tools and knowledge I work with">نرم‌افزارها و دانش‌های تخصصی که باهاشون کار می‌کنم</p>
+  <div class="skills-grid">
+    <div class="skill-card reveal">
+      <div class="skill-head"><span class="ic">🛠️</span><h3>Aspen HYSYS</h3></div>
+      <div class="bar"><i data-w="85"></i></div><span data-fa="شبیه‌سازی فرآیندهای گازی و پالایشی" data-en="Gas &amp; refinery process simulation">شبیه‌سازی فرآیندهای گازی و پالایشی</span>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-head"><span class="ic">⚗️</span><h3>Aspen Plus</h3></div>
+      <div class="bar"><i data-w="80"></i></div><span data-fa="طراحی و تحلیل برج‌های تقطیر و راکتورها" data-en="Distillation &amp; reactor design">طراحی و تحلیل برج‌های تقطیر و راکتورها</span>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-head"><span class="ic">📊</span><h3>MATLAB</h3></div>
+      <div class="bar"><i data-w="75"></i></div><span data-fa="حل معادلات، برنامه‌نویسی عددی و رسم نمودار" data-en="Numerical solving &amp; scripting">حل معادلات، برنامه‌نویسی عددی و رسم نمودار</span>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-head"><span class="ic">📐</span><h3>AutoCAD</h3></div>
+      <div class="bar"><i data-w="70"></i></div><span data-fa="نقشه‌کشی تجهیزات فرآیندی" data-en="Drafting process equipment">نقشه‌کشی تجهیزات فرآیندی</span>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-head"><span class="ic">⚖️</span><h3 data-fa="موازنه مواد و انرژی" data-en="Mass &amp; Energy Balances">موازنه مواد و انرژی</h3></div>
+      <div class="bar"><i data-w="90"></i></div><span data-fa="تحلیل سیستم‌های تک‌و چندمرحله‌ای" data-en="Single &amp; multi-stage systems">تحلیل سیستم‌های تک‌و چندمرحله‌ای</span>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-head"><span class="ic">🔥</span><h3 data-fa="ترمودینامیک" data-en="Thermodynamics">ترمودینامیک</h3></div>
+      <div class="bar"><i data-w="82"></i></div><span data-fa="معادلات حالت و تعادل فازی" data-en="EOS &amp; phase equilibrium">معادلات حالت و تعادل فازی</span>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-head"><span class="ic">🏭</span><h3 data-fa="عملیات واحد" data-en="Unit Operations">عملیات واحد</h3></div>
+      <div class="bar"><i data-w="78"></i></div><span data-fa="تقطیر، جذب، تبادل حرارت و انتقال مواد" data-en="Distillation, absorption, heat exchange">تقطیر، جذب، تبادل حرارت و انتقال مواد</span>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-head"><span class="ic">💧</span><h3 data-fa="مکانیک سیالات" data-en="Fluid Mechanics">مکانیک سیالات</h3></div>
+      <div class="bar"><i data-w="76"></i></div><span data-fa="انتقال سیال، پمپ‌ها و افت فشار" data-en="Flow, pumps &amp; pressure drop">انتقال سیال، پمپ‌ها و افت فشار</span>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-head"><span class="ic">📈</span><h3>MS Excel</h3></div>
+      <div class="bar"><i data-w="88"></i></div><span data-fa="جدول‌سازی مهندسی، موازنه و نمودارها" data-en="Eng. sheets &amp; charts">جدول‌سازی مهندسی، موازنه و نمودارها</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESUME ================= -->
+<section id="resume">
+  <h2 class="section-title reveal" data-fa="رزومه و تجربه‌ها" data-en="Resume &amp; Journey">رزومه و تجربه‌ها</h2>
+  <p class="section-sub reveal" data-fa="مسیر تحصیلی و پروژه‌های من تا امروز" data-en="My academic path and projects so far">مسیر تحصیلی و پروژه‌های من تا امروز</p>
+  <div class="timeline">
+    <div class="tl-item reveal">
+      <div class="tl-date" data-fa="۱۴۰۳ - اکنون | ترم ۶" data-en="2024 – Now | 6th Semester">۱۴۰۳ - اکنون | ترم ۶</div>
+      <h3 data-fa="دانشجوی کارشناسی مهندسی شیمی" data-en="B.Sc. Student — Chemical Engineering">دانشجوی کارشناسی مهندسی شیمی</h3>
+      <h4 data-fa="دانشگاه صنعتی قوچان" data-en="Quchan University of Technology">دانشگاه صنعتی قوچان</h4>
+      <p data-fa="گذراندن دروس اصلی مثل ترمودینامیک، مکانیک سیالات، عملیات واحد و انتقال حرارت؛ و کار همزمان روی پروژه‌های شبیه‌سازی با نرم‌افزارهای صنعتی." data-en="Completed core courses (thermodynamics, fluid mechanics, unit operations, heat transfer) while working on simulation projects with industrial software.">گذراندن دروس اصلی مثل ترمودینامیک، مکانیک سیالات، عملیات واحد و انتقال حرارت؛ و کار همزمان روی پروژه‌های شبیه‌سازی با نرم‌افزارهای صنعتی.</p>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-date" data-fa="۱۴۰۴" data-en="2025">۱۴۰۴</div>
+      <h3 data-fa="پروژه شبیه‌سازی برج تقطیر" data-en="Distillation Column Simulation">پروژه شبیه‌سازی برج تقطیر</h3>
+      <h4>Aspen HYSYS</h4>
+      <p data-fa="شبیه‌سازی برج تقطیر برای جداسازی مخلوط هیدروکربنی، تحلیل تعداد سینی‌ها و نسبت برگشت به‌عنوان پروژه درسی عملیات واحد." data-en="Simulated a hydrocarbon separation column, analyzing stage count and reflux ratio as a unit operations course project.">شبیه‌سازی برج تقطیر برای جداسازی مخلوط هیدروکربنی، تحلیل تعداد سینی‌ها و نسبت برگشت به‌عنوان پروژه درسی عملیات واحد.</p>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-date" data-fa="۱۴۰۳" data-en="2024">۱۴۰۳</div>
+      <h3 data-fa="دوره‌ی مهارت‌های نرم‌افزاری مهندسی شیمی" data-en="Chemical Engineering Software Course">دوره‌ی مهارت‌های نرم‌افزاری مهندسی شیمی</h3>
+      <h4 data-fa="برنامه‌نویسی MATLAB و شبیه‌سازی Aspen" data-en="MATLAB scripting &amp; Aspen simulation">برنامه‌نویسی MATLAB و شبیه‌سازی Aspen</h4>
+      <p data-fa="آموزش حل دستگاه معادلات مهندسی در MATLAB، استخراج داده از شبیه‌سازی‌ها و تهیه‌ی گزارش پروژه‌ی میان‌ترمی." data-en="Trained in solving engineering equation systems in MATLAB, exporting simulation data and mid-term project reporting.">آموزش حل دستگاه معادلات مهندسی در MATLAB و خروجی گرفتن داده از شبیه‌سازی‌ها به‌همراه ساخت گزارش میان‌ترمی.</p>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-date" data-fa="۱۴۰۲" data-en="2023">۱۴۰۲</div>
+      <h3 data-fa="شروع تحصیل در مهندسی شیمی" data-en="Started Chemical Engineering">شروع تحصیل در مهندسی شیمی</h3>
+      <h4 data-fa="دانشگاه صنعتی قوچان — مقطع کارشناسی" data-en="Quchan University of Technology — Undergraduate">دانشگاه صنعتی قوچان — مقطع کارشناسی</h4>
+      <p data-fa="قبولی در رشته‌ی مهندسی شیمی و مهاجرت از بوشهر به قوچان برای ادامه‌ی تحصیل؛ شروع یادگیری جدی و علاقه‌مندی به بخش صنعت و شبیه‌سازی." data-en="Admitted to Chemical Engineering and moved from Bushehr to Quchan; started building a serious interest in industry and simulation.">قبولی در رشته‌ی مهندسی شیمی و مهاجرت از بوشهر به قوچان برای ادامه‌ی تحصیل؛ شروع یادگیری جدی و علاقه‌مندی به بخش صنعت و شبیه‌سازی.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects">
+  <h2 class="section-title reveal" data-fa="نمونه کارها" data-en="My Projects">نمونه کارها</h2>
+  <p class="section-sub reveal" data-fa="پروژه‌ها و کارهای عملی که انجام دادم (نمونه‌ها به‌زودی با جزئیات واقعی کامل می‌شوند)" data-en="Hands-on work I've done (samples — to be replaced with real details soon)">پروژه‌ها و کارهای عملی که انجام دادم (نمونه‌ها به‌زودی با جزئیات واقعی کامل می‌شوند)</p>
+  <div class="proj-grid">
+    <div class="proj reveal">
+      <div class="proj-banner" style="background:linear-gradient(135deg,#dbeafe,#ede9fe)">🛢️</div>
+      <div class="proj-body">
+        <h3 data-fa="شبیه‌سازی واحد بازیابی گاز" data-en="Gas Recovery Unit Simulation">شبیه‌سازی واحد بازیابی گاز</h3>
+        <p data-fa="شبیه‌سازی کامل جداسازی ترکیبات سبک گاز طبیعی در HYSYS؛ شامل انتخاب معادله‌ی حالت، اکولایزرها و تحلیل انرژی." data-en="Full HYSYS simulation of natural gas light-end separation: EOS selection, coolers and energy analysis.">شبیه‌سازی کامل جداسازی ترکیبات سبک گاز طبیعی در HYSYS؛ شامل انتخاب معادله‌ی حالت، اکولایزرها و تحلیل انرژی.</p>
+        <div class="tags"><span class="tag">HYSYS</span><span class="tag" data-fa="ترمودینامیک" data-en="Thermodynamics">ترمودینامیک</span></div>
+      </div>
+    </div>
+    <div class="proj reveal">
+      <div class="proj-banner" style="background:linear-gradient(135deg,#fef9c3,#dbeafe)">🌡️</div>
+      <div class="proj-body">
+        <h3 data-fa="طراحی مبدل حرارتی پوسته-لوله" data-en="Shell &amp; Tube Heat Exchanger">طراحی مبدل حرارتی پوسته-لوله</h3>
+        <p data-fa="طراحی و کنترل مبدل حرارتی به‌روش LMTD و ضریب کلی انتقال حرارت؛ به‌همراه مقایسه‌ی نتایج با نمونه‌ی صنعتی." data-en="Designed a shell-and-tube exchanger via the LMTD method and overall heat-transfer coefficients, benchmarked against an industrial sample.">طراحی و کنترل مبدل حرارتی به‌روش LMTD و ضریب کلی انتقال حرارت؛ به‌همراه مقایسه‌ی نتایج با نمونه‌ی صنعتی.</p>
+        <div class="tags"><span class="tag" data-fa="انتقال حرارت" data-en="Heat Transfer">انتقال حرارت</span><span class="tag">Excel</span></div>
+      </div>
+    </div>
+    <div class="proj reveal">
+      <div class="proj-banner" style="background:linear-gradient(135deg,#dcfce7,#dbeafe)">📊</div>
+      <div class="proj-body">
+        <h3 data-fa="شیت موازنه مواد و انرژی" data-en="Mass Balance Excel Sheet">شیت موازنه مواد و انرژی</h3>
+        <p data-fa="ساخت ابزار اکسل و برنامه‌نویسی MATLAB برای حل خودکار موازنه‌ی چندجمله‌ای فرآیند با چند جزء و چند جریان." data-en="Built an Excel + MATLAB tool to auto-solve multi-component, multi-stream process balances.">ساخت ابزار اکسل و برنامه‌نویسی MATLAB برای حل خودکار موازنه‌ی چندجمله‌ای فرآیند با چند جزء و چند جریان.</p>
+        <div class="tags"><span class="tag">MATLAB</span><span class="tag">Excel</span></div>
+      </div>
+    </div>
+    <div class="proj reveal">
+      <div class="proj-banner" style="background:linear-gradient(135deg,#fee2e2,#ede9fe)">⚗️</div>
+      <div class="proj-body">
+        <h3 data-fa="گزارش آزمایشگاه عملیات واحد" data-en="Unit Ops Lab Reports">گزارش آزمایشگاه عملیات واحد</h3>
+        <p data-fa="مجموعه‌ی گزارش‌های آزمایشگاه: فیلتراسیون، تقطیر آزمایشگاهی، انتقال جرم و رفتار سیالات با تحلیل خطا و نتیجه‌گیری مهندسی." data-en="A set of lab reports: filtration, bench-scale distillation, mass transfer and fluid behavior — with error analysis and engineering conclusions.">مجموعه‌ی گزارش‌های آزمایشگاه: فیلتراسیون، تقطیر آزمایشگاهی، انتقال ماده و رفتار پایدار سیال با تحلیل خطا و نتیجه‌گیری مهندسی.</p>
+        <div class="tags"><span class="tag" data-fa="آزمایشگاه" data-en="Lab">آزمایشگاه</span><span class="tag" data-fa="گزارش‌نویسی" data-en="Reporting">گزارش‌نویسی</span></div>
+      </div>
+    </div>
+    <div class="proj reveal">
+      <div class="proj-banner" style="background:linear-gradient(135deg,#dbeafe,#d1fae5)">📋</div>
+      <div class="proj-body">
+        <h3 data-fa="نقشه‌ی PFD و P&ID فرآیند" data-en="Process PFD &amp; P&amp;ID">نقشه‌ی PFD و P&ID فرآیند</h3>
+        <p data-fa="ترسیم دیاگرام جریان و نقشه‌ی لوله‌کشی و ابزار دقیق یک واحد فرآیندی در AutoCAD بر اساس استانداردهای نمادگذاری." data-en="AutoCAD drafting of a process flow diagram and piping/instrumentation layout following standard symbol conventions.">ترسیم دیاگرام جریان و نقشه‌ی لوله‌کشی و ابزار دقیق یک واحد فرآیندی در AutoCAD بر اساس استانداردهای نمادگذاری.</p>
+        <div class="tags"><span class="tag">AutoCAD</span><span class="tag">P&amp;ID</span></div>
+      </div>
+    </div>
+    <div class="proj proj-more reveal">
+      <div class="proj-banner" style="background:linear-gradient(135deg,var(--accent-soft),var(--bg-alt))">➕</div>
+      <div class="proj-body">
+        <h3 data-fa="پروژه بعدی: پروژه‌ی شما!" data-en="Next project: yours!">پروژه بعدی: پروژه‌ی شما!</h3>
+        <p data-fa="در حال یادگیری پروژه‌های سطح بالاتر فرآیند با HYSYS و به دنبال اولین کارآموزی صنعتی هستم. با من در ارتباط باشید!" data-en="Currently leveling up on advanced process projects in HYSYS and hunting for my first industrial internship. Let's connect!">در حال یادگیری پروژه‌های سطح بالاتر فرآیند با HYSYS و به دنبال اولین کارآموزی صنعتی هستم. با من در ارتباط باشید!</p>
+        <div class="tags"><span class="tag" data-fa="در حال یادگیری" data-en="Learning">در حال یادگیری</span><span class="tag" data-fa="کارآموزی" data-en="Internship">کارآموزی</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-box reveal">
+    <h2 data-fa="بیایید در ارتباط باشیم!" data-en="Let's connect!">بیایید در ارتباط باشیم!</h2>
+    <p data-fa="برای همکاری، پروژه یا حتی یک گفت‌وگوی مهندسی، از طریق اینستاگرام پیام بدهید 🙌" data-en="For collaborations, projects or even a quick engineering chat — feel free to DM me on Instagram 🙌">برای همکاری، پروژه یا حتی یک گفت‌وگوی مهندسی، از طریق اینستاگرام پیام بدهید 🙌</p>
+    <div class="socials">
+      <a class="social" href="https://instagram.com/alirezasmdian" target="_blank" rel="noopener">
+        📷 Instagram — @alirezasmdian
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>
+    <span data-fa="طراحی و توسعه با ❤️ توسط" data-en="Designed &amp; developed with ❤️ by">طراحی و توسعه با ❤️ توسط</span>
+    <b>علیرضا صمدیان آزاد</b> · <span id="year"></span>
+  </p>
+</footer>
+
+<script>
+/* ---------- Year ---------- */
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ---------- Language Switch ---------- */
+const langBtn = document.getElementById('langBtn');
+const html = document.documentElement;
+let lang = 'fa';
+
+function applyLang(l){
+  lang = l;
+  html.lang = l;
+  html.dir = (l === 'fa') ? 'rtl' : 'ltr';
+  document.querySelectorAll('[data-fa]').forEach(el=>{
+    el.textContent = (l === 'fa') ? el.dataset.fa : el.dataset.en;
+  });
+  langBtn.textContent = (l === 'fa') ? 'EN' : 'فا';
+  document.title = (l==='fa') ? 'علیرضا صمدیان آزاد | دانشجوی مهندسی شیمی'
+                              : 'Alireza Samadian Azad | Chemical Engineering Student';
+  const logoEl = document.querySelector('.logo');
+  logoEl.innerHTML = (l==='fa') ? 'علیرضا<span>.</span>' : 'Alireza<span>.</span>';
+  startTyping();
+}
+langBtn.addEventListener('click',()=> applyLang(lang==='fa' ? 'en':'fa'));
+
+/* ---------- Theme ---------- */
+const themeBtn = document.getElementById('themeBtn');
+themeBtn.addEventListener('click',()=>{
+  html.classList.toggle('dark');
+  themeBtn.textContent = html.classList.contains('dark') ? '☀️' : '🌙';
+});
+
+/* ---------- Mobile menu ---------- */
+const menuBtn = document.getElementById('menuBtn');
+const navLinks = document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=> navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+
+/* ---------- Reveal on scroll ---------- */
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('show');
+      const bar = e.target.querySelector('.bar i');
+      if(bar) bar.style.width = bar.dataset.w + '%';
+      io.unobserve(e.target);
+    }
+  });
+},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ---------- Typing effect ---------- */
+const phrases = {
+  fa:["شبیه‌ساز فرآیند در Aspen HYSYS…","عاشق ترمودینامیک و برج تقطیر…","دانشجوی ترم ۶ مهندسی شیمی 🔬","در جست‌وجوی اولین کارآموزی صنعتی…"],
+  en:["Process simulator in Aspen HYSYS…","Thermo nerd — distillation &amp; columns…","6th-semester ChemEng student 🔬","Hunting my first industrial internship…"]
+};
+const typingEl = document.getElementById('typing');
+let pi = 0, ci = 0, deleting = false, timer;
+
+function typeLoop(){
+  const list = phrases[lang];
+  const phrase = list[pi % list.length];
+  typingEl.innerHTML = phrase.substring(0, ci);
+  let delay = deleting ? 45 : 95;
+  if(!deleting && ci === phrase.length){ delay = 1900; deleting = true; }
+  else if(deleting && ci === 0){ deleting = false; pi++; delay = 450; }
+  else ci += deleting ? -1 : 1;
+  timer = setTimeout(typeLoop, delay);
+}
+function startTyping(){ clearTimeout(timer); ci = 0; deleting = false; pi = 0; typeLoop(); }
+startTyping();
+
+</script>
+</body>
+</html>
