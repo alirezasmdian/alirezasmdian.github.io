@@ -55,7 +55,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#fafafa;
+    --bg:#ffffff;
     --bg-alt:#f0f1f4;
     --card:#ffffff;
     --text:#181c24;
@@ -320,6 +320,25 @@
   .rm-group ul{list-style:none;display:flex;flex-direction:column;gap:.35rem}
   .rm-group li{font-size:.88rem;color:var(--text-soft)}
 
+  /* Ambient chemical pattern */
+  body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.22;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cpath d='M70 12 L120 40 L120 96 L70 124 L20 96 L20 40 Z' fill='none' stroke='%23d9e8e5' stroke-width='1.4'/%3E%3Ccircle cx='70' cy='68' r='9' fill='none' stroke='%23d9e8e5' stroke-width='1.4'/%3E%3C/svg%3E")}
+  html.dark body::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cpath d='M70 12 L120 40 L120 96 L70 124 L20 96 L20 40 Z' fill='none' stroke='%232e4147' stroke-width='1.4'/%3E%3Ccircle cx='70' cy='68' r='9' fill='none' stroke='%232e4147' stroke-width='1.4'/%3E%3C/svg%3E")}
+  .eqs{stroke:var(--accent);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+  .eqt{stroke:var(--accent);fill:none;stroke-width:1.4;opacity:.5}
+  .eqf{fill:var(--accent-soft);stroke:none}
+  .eqa{fill:var(--accent);stroke:none}
+  .eql{stroke:var(--text-soft);fill:none;stroke-width:1.5;stroke-dasharray:4 4}
+  .pipe{stroke:var(--accent);fill:none;stroke-width:2.6;stroke-dasharray:7 6;animation:eqflow 1.1s linear infinite}
+  @keyframes eqflow{to{stroke-dashoffset:-13}}
+  .svgt{font-family:sans-serif;font-size:10px;fill:var(--text-soft);direction:ltr}
+  .equip-fig{background:var(--bg-alt);border:1px solid var(--border);border-radius:14px;padding:.55rem .8rem;margin-bottom:.8rem}
+  .equip-fig svg{width:100%;height:120px;display:block}
+  .equip-wide{border:1px solid var(--border);border-radius:var(--radius);background:var(--card);padding:1.4rem 1.8rem;box-shadow:var(--shadow);margin-bottom:2.4rem}
+  .ref-head{display:flex;align-items:center;gap:.85rem;margin-bottom:.6rem}
+  .ref-avatar{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#f59e0b);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;flex-shrink:0;box-shadow:0 5px 14px rgba(13,148,136,.35)}
+  .ref-head h4{font-size:.98rem;line-height:1.5}
+  .ref-head h4 small{display:block;color:var(--text-soft);font-weight:600;font-size:.74rem;direction:ltr;text-align:start}
+
   @media(max-width:860px){
     .hero{flex-direction:column-reverse;text-align:center;padding-top:6.5rem;gap:2rem}
     .hero-cta,.hero-stats{justify-content:center}
@@ -499,17 +518,17 @@
     <div class="rm-group reveal">
       <h4 data-fa="🛢️ پالایشگاه نفت" data-en="🛢️ Oil Refinery">🛢️ پالایشگاه نفت</h4>
       <ul>
-        <li data-fa="تقطیر اتمسفری و خلأ (CDU/VDU)" data-en="Atmospheric &amp;amp; vacuum distillation">تقطیر اتمسفری و خلأ (CDU/VDU)</li>
-        <li data-fa="کراکینگ کاتالیستی FCC و رفرمینگ" data-en="FCC &amp;amp; catalytic reforming">کراکینگ کاتالیستی FCC و رفرمینگ</li>
-        <li data-fa="هیدروکراکینگ و هیدروتریتینگ" data-en="Hydrocracking &amp;amp; hydrotreating">هیدروکراکینگ و هیدروتریتینگ</li>
-        <li data-fa="شیرین‌سازی گاز و واحد گوگرد (Claus)" data-en="Gas sweetening &amp;amp; Claus sulfur">سوخت‌سازی گاز و گوگردزدایی (Claus)</li>
+        <li data-fa="تقطیر اتمسفری و خلأ (CDU/VDU)" data-en="Atmospheric &amp; vacuum distillation">تقطیر اتمسفری و خلأ (CDU/VDU)</li>
+        <li data-fa="کراکینگ کاتالیستی FCC و رفرمینگ" data-en="FCC &amp; catalytic reforming">کراکینگ کاتالیستی FCC و رفرمینگ</li>
+        <li data-fa="هیدروکراکینگ و هیدروتریتینگ" data-en="Hydrocracking &amp; hydrotreating">هیدروکراکینگ و هیدروتریتینگ</li>
+        <li data-fa="شیرین‌سازی گاز و واحد گوگرد (Claus)" data-en="Gas sweetening &amp; Claus sulfur">سوخت‌سازی گاز و گوگردزدایی (Claus)</li>
       </ul>
     </div>
     <div class="rm-group reveal">
       <h4 data-fa="🧪 پتروشیمی" data-en="🧪 Petrochemical">🧪 پتروشیمی</h4>
       <ul>
         <li data-fa="کراکینگ بخار نفتا (Steam Cracking)" data-en="Naphtha steam cracking">کراکینگ بخار نفتا (Steam Cracking)</li>
-        <li data-fa="بازیابی اتیلن و پروپیلن" data-en="Ethylene &amp;amp; propylene recovery">بازیابی اتیلن و پروپیلن</li>
+        <li data-fa="بازیابی اتیلن و پروپیلن" data-en="Ethylene &amp; propylene recovery">بازیابی اتیلن و پروپیلن</li>
         <li data-fa="پلیمریزاسیون: PE / PP / PVC" data-en="Polymerization: PE / PP / PVC">پلیمریزاسیون: PE / PP / PVC</li>
         <li data-fa="آروماتیک‌ها: بنزن، تولوئن، زیلن (BTX)" data-en="Aromatics: benzene, toluene, xylene">آروماتیک‌ها: بنزن، تولوئن، زیلن (BTX)</li>
       </ul>
@@ -517,19 +536,19 @@
     <div class="rm-group reveal">
       <h4 data-fa="💨 پردازش گاز طبیعی" data-en="💨 Natural Gas Processing">💨 پردازش گاز طبیعی</h4>
       <ul>
-        <li data-fa="شیرین‌سازی گاز با آمین و کلاوس" data-en="Amine sweetening &amp;amp; Claus">شیرین‌سازی با آمین و Claus</li>
+        <li data-fa="شیرین‌سازی گاز با آمین و کلاوس" data-en="Amine sweetening &amp; Claus">شیرین‌سازی با آمین و Claus</li>
         <li data-fa="بازیابی مایعات گازی NGL (Cryogenic)" data-en="NGL / cryogenic recovery">بازیابی مایعات گازی NGL (کریوجنیک)</li>
-        <li data-fa="LNG و CNG — مایع‌سازی و ذخیره‌سازی" data-en="LNG &amp;amp; CNG — liquefaction &amp;amp; storage">LNG و CNG — مایع‌سازی و ذخیره‌سازی</li>
+        <li data-fa="LNG و CNG — مایع‌سازی و ذخیره‌سازی" data-en="LNG &amp; CNG — liquefaction &amp; storage">LNG و CNG — مایع‌سازی و ذخیره‌سازی</li>
         <li data-fa="رطوبت‌گیری گاز با TEG" data-en="Gas dehydration with TEG">رطوبت‌گیری گاز با TEG</li>
       </ul>
     </div>
     <div class="rm-group reveal">
-      <h4 data-fa="⚙️ تاسیسات و Utilities" data-en="⚙️ Utilities &amp;amp; Steam">⚙️ تاسیسات و Utilities</h4>
+      <h4 data-fa="⚙️ تاسیسات و Utilities" data-en="⚙️ Utilities &amp; Steam">⚙️ تاسیسات و Utilities</h4>
       <ul>
         <li data-fa="بویلر و شبکه‌ی بخار ۳ سطحی (HP/MP/LP)" data-en="Boilers and HP/MP/LP steam network">بویلر و شبکه‌ی بخار ۳ سطحی (HP/MP/LP)</li>
-        <li data-fa="آب DEMIN و برج خنک‌کننده" data-en="Demin water &amp;amp; cooling tower">آب دی‌مین و برج خنک‌کننده</li>
-        <li data-fa="هوای ابزار (Instrument Air) و N₂" data-en="Instrument air &amp;amp; N₂">هوای ابزار (Instrument Air) و N₂</li>
-        <li data-fa="بازیابی انرژی: توربین، سوپرهیتر، اکونومایزر" data-en="Energy recovery: turbines &amp;amp; economizers">بازیابی انرژی: توربین، اورُهیت‌ر، اکونومایزر</li>
+        <li data-fa="آب DEMIN و برج خنک‌کننده" data-en="Demin water &amp; cooling tower">آب دی‌مین و برج خنک‌کننده</li>
+        <li data-fa="هوای ابزار (Instrument Air) و N₂" data-en="Instrument air &amp; N₂">هوای ابزار (Instrument Air) و N₂</li>
+        <li data-fa="بازیابی انرژی: توربین، سوپرهیتر، اکونومایزر" data-en="Energy recovery: turbines &amp; economizers">بازیابی انرژی: توربین، اورُهیت‌ر، اکونومایزر</li>
       </ul>
     </div>
   </div>
@@ -574,7 +593,7 @@
     <div class="kb-card reveal">
       <h4><span data-fa="🔧 مبدل حرارتی (HEX)" data-en="🔧 Heat Exchanger (HEX)">🔧 مبدل حرارتی (HEX)</span></h4>
       <p data-fa="رایج‌ترین تجهیز صنعت: پوسته-لوله یا صفحه‌ای؛ فولینگ (رسوب) و نشتی دو درد همیشگی مهندسان‌اند." data-en="The most common industry equipment: shell-and-tube or plate; fouling and leaks are eternal pains.">رایج‌ترین تجهیز صنعت: پوسته-لوله یا صفحه‌ای؛ فولینگ (رسوب) و نشتی دو درد همیشگی مهندسان‌اند.</p>
-      <div class="tags"><span class="tag">U &amp;amp; LMTD</span></div>
+      <div class="tags"><span class="tag">U &amp; LMTD</span></div>
     </div>
     <div class="kb-card reveal">
       <h4><span data-fa="💠 سپراتور فاز (KO Drum)" data-en="💠 Phase Separator (KO Drum)">💠 سپراتور فاز (KO Drum)</span></h4>
@@ -583,39 +602,434 @@
     </div>
   </div>
 
-  <h3 class="reveal" style="font-size:1.35rem;font-weight:800;margin-top:2.8rem;margin-bottom:1rem"><span data-fa="📚 مراجع مهم دروس مهندسی شیمی" data-en="📚 ChemEng Course References">📚 مراجع مهم دروس مهندسی شیمی</span></h3>
-  <div class="roadmap">
-    <div class="rm-group reveal">
-      <h4 data-fa="📘 دروس پایه" data-en="📘 Foundation Courses">📘 دروس پایه</h4>
-      <ul>
-        <li data-fa="ترمودینامیک: Cengel &amp;amp; Boles — Thermodynamics: An Engineering Approach + Smith, Van Ness &amp;amp; Abbott" data-en="Thermodynamics: Cengel &amp;amp; Boles + Smith, Van Ness &amp;amp; Abbott">ترمودینامیک: Cengel &amp;amp; Boles + Smith, Van Ness &amp;amp; Abbott</li>
-        <li data-fa="شیمی فیزیک: Atkins — Physical Chemistry" data-en="Physical chemistry: Atkins">شیمی فیزیک: Atkins — Physical Chemistry</li>
-        <li data-fa="ریاضیات: Kreyszig — Advanced Engineering Mathematics" data-en="Math: Kreyszig Advanced Engineering Mathematics">ریاضیات: Kreyszig — Advanced Engineering Mathematics</li>
-      </ul>
+  <!-- ---===--- LIVE PROCESS FLOW DIAGRAM ---===--- -->
+  <div class="equip-wide reveal">
+    <svg viewBox="0 0 760 235" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Process flow diagram">
+      <line class="pipe" x1="0" y1="100" x2="26" y2="100"/>
+      <text class="svgt" x="2" y="88">Feed</text>
+      <rect class="eqf" x="26" y="72" width="84" height="56" rx="27"/>
+      <rect class="eqs" x="26" y="72" width="84" height="56" rx="27"/>
+      <line class="eql" x1="36" y1="112" x2="100" y2="112"/>
+      <text class="svgt" x="30" y="64">Separator</text>
+      <line class="pipe" x1="68" y1="128" x2="68" y2="158"/>
+      <circle class="eqs" cx="68" cy="170" r="11"/>
+      <circle class="eqa" cx="68" cy="170" r="3.5"/>
+      <text class="svgt" x="40" y="200">Pump</text>
+      <line class="pipe" x1="79" y1="170" x2="180" y2="170"/>
+      <line class="pipe" x1="180" y1="170" x2="180" y2="122"/>
+      <rect class="eqf" x="152" y="52" width="56" height="70" rx="10"/>
+      <rect class="eqs" x="152" y="52" width="56" height="70" rx="10"/>
+      <path class="eqa" d="M180 88 c4 8 12 7 12 15 a12 12 0 0 1 -24 0 c0 -8 8 -7 12 -15 Z"/>
+      <text class="svgt" x="146" y="42">Heater</text>
+      <line class="pipe" x1="208" y1="86" x2="248" y2="86"/>
+      <rect class="eqf" x="248" y="46" width="58" height="80" rx="16"/>
+      <rect class="eqs" x="248" y="46" width="58" height="80" rx="16"/>
+      <line class="eql" x1="258" y1="96" x2="296" y2="96"/>
+      <line class="eql" x1="258" y1="108" x2="296" y2="108"/>
+      <text class="svgt" x="246" y="36">Reactor</text>
+      <line class="pipe" x1="306" y1="86" x2="346" y2="86"/>
+      <rect class="eqf" x="346" y="66" width="58" height="40" rx="12"/>
+      <rect class="eqs" x="346" y="66" width="58" height="40" rx="12"/>
+      <path class="eqt" d="M354 92 l10 -10 l10 10 l10 -10 l10 10 l10 -10"/>
+      <text class="svgt" x="348" y="58">HEX</text>
+      <line class="pipe" x1="404" y1="86" x2="470" y2="60"/>
+      <rect class="eqf" x="462" y="28" width="56" height="160" rx="20"/>
+      <rect class="eqs" x="462" y="28" width="56" height="160" rx="20"/>
+      <line class="eql" x1="470" y1="58" x2="510" y2="58"/>
+      <line class="eql" x1="470" y1="80" x2="510" y2="80"/>
+      <line class="eql" x1="470" y1="102" x2="510" y2="102"/>
+      <line class="eql" x1="470" y1="124" x2="510" y2="124"/>
+      <line class="eql" x1="470" y1="146" x2="510" y2="146"/>
+      <text class="svgt" x="452" y="204">Distillation</text>
+      <line class="pipe" x1="518" y1="40" x2="560" y2="40"/>
+      <rect class="eqf" x="560" y="26" width="52" height="28" rx="10"/>
+      <rect class="eqs" x="560" y="26" width="52" height="28" rx="10"/>
+      <text class="svgt" x="556" y="16">Condenser</text>
+      <line class="pipe" x1="586" y1="54" x2="586" y2="72"/>
+      <line class="pipe" x1="586" y1="72" x2="518" y2="72"/>
+      <line class="pipe" x1="612" y1="40" x2="648" y2="40"/>
+      <path class="eqa" d="M648 34 l10 6 l-10 6 Z"/>
+      <text class="svgt" x="636" y="30">Top product</text>
+      <line class="pipe" x1="478" y1="188" x2="478" y2="210"/>
+      <circle class="eqs" cx="502" cy="210" r="11"/>
+      <text class="svgt" x="480" y="196">Reboiler</text>
+      <line class="pipe" x1="513" y1="210" x2="530" y2="188"/>
+      <line class="pipe" x1="516" y1="224" x2="648" y2="224"/>
+      <path class="eqa" d="M648 218 l10 6 l-10 6 Z"/>
+      <text class="svgt" x="644" y="214">Bottoms</text>
+      <text class="svgt" x="230" y="170">a typical process: feed in, products out</text>
+    </svg>
+  </div>
+
+  <!-- ---===--- HEAT EXCHANGER TYPES ---===--- -->
+  <h3 class="reveal" style="font-size:1.35rem;font-weight:800;margin-top:2.6rem;margin-bottom:1.1rem"><span data-fa="🔩 انواع مبدل‌های حرارتی" data-en="🔩 Heat Exchanger Types">🔩 انواع مبدل‌های حرارتی</span></h3>
+  <div class="kb-grid">
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><rect class="eqf" x="30" y="45" width="140" height="34" rx="17"/><rect class="eqs" x="30" y="45" width="140" height="34" rx="17"/><line class="eqt" x1="46" y1="53" x2="154" y2="53"/><line class="eqt" x1="46" y1="62" x2="154" y2="62"/><line class="eqt" x1="46" y1="71" x2="154" y2="71"/><line class="eqs" x1="10" y1="62" x2="30" y2="62"/><line class="eqs" x1="170" y1="62" x2="190" y2="62"/><line class="eqs" x1="90" y1="30" x2="90" y2="45"/><line class="eqs" x1="110" y1="79" x2="110" y2="94"/></svg>
+      </div>
+      <h4><span data-fa="🛢️ پوسته-لوله" data-en="🛢️ Shell &amp; Tube">🛢️ پوسته-لوله</span></h4>
+      <p data-fa="همه‌پوش‌ترین مبدل صنعت؛ سیال داغ داخل لوله‌ها از کنار سیال سرد در پوسته می‌گذرد؛ صفحات Baffle جابجایی متقاطع و انتقال بیشتری می‌سازند." data-en="The industry workhorse; the hot fluid inside tubes crosses the cold fluid in the shell. Baffles force cross-flow for better transfer.">رایج‌ترین مبدل صنعت؛ سیال داغ داخل لوله‌ها از کنار سیال سرد در پوسته می‌گذرد؛ صفحات Baffle جابجایی متقاطع و انتقال بیشتری می‌سازند.</p>
     </div>
-    <div class="rm-group reveal">
-      <h4 data-fa="📗 انتقال‌ها" data-en="📗 Transport Phenomena">📗 انتقال‌ها</h4>
-      <ul>
-        <li data-fa="مکانیک سیالات: Geankoplis — Transport Processes (باب ۱ و ۲) + Bird, Stewart, Lightfoot" data-en="Fluids: Geankoplis + Bird, Stewart, Lightfoot">مکانیک سیالات: Geankoplis + Bird, Stewart, Lightfoot</li>
-        <li data-fa="انتقال حرارت: Incropera — Fundamentals of Heat and Mass Transfer" data-en="Heat: Incropera">انتقال حرارت: Incropera — Fundamentals of Heat and Mass Transfer</li>
-        <li data-fa="انتقال جرم: Treybal — Mass-Transfer Operations" data-en="Mass transfer: Treybal">انتقال جرم: Treybal — Mass-Transfer Operations</li>
-      </ul>
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><path class="eqs" d="M40 25 L175 95"/><path class="eqs" d="M40 95 L175 25"/><line class="eqt" x1="60" y1="36" x2="145" y2="85"/><line class="eqt" x1="60" y1="50" x2="145" y2="99"/><line class="eqt" x1="60" y1="64" x2="145" y2="108"/><line class="eqt" x1="78" y1="25" x2="78" y2="95"/><line class="eqt" x1="105" y1="25" x2="105" y2="95"/><line class="eqt" x1="132" y1="25" x2="132" y2="95"/><line class="eqs" x1="25" y1="38" x2="42" y2="38"/><line class="eqs" x1="25" y1="82" x2="42" y2="82"/></svg>
+      </div>
+      <h4><span data-fa="🧯 صفحه‌ای (Plate)" data-en="🥪 Plate (Gasketed)">🧯 صفحه‌ای (Plate)</span></h4>
+      <p data-fa="صفحات موج‌دار متوالی؛ سطح مخصوص بزرگ در حجم کم، افت فشار کم و شست‌وشوی درجا (CIP) — برای خوراک‌های رسوب‌کننده عالی." data-en="Corrugated plates give huge area in small volume, low pressure drop and easy in-place cleaning (CIP).">صفحات موج‌دار متوالی؛ سطح مخصوص بزرگ در حجم کم، افت فشار کم و شست‌وشوی درجا (CIP) — برای خوراک‌های رسوب‌کننده عالی.</p>
     </div>
-    <div class="rm-group reveal">
-      <h4 data-fa="📙 دروس تخصصی" data-en="📙 Specialized Courses">📙 دروس تخصصی</h4>
-      <ul>
-        <li data-fa="عملیات واحد: McCabe, Smith &amp;amp; Harriott — Unit Operations" data-en="Unit operations: McCabe, Smith &amp;amp; Harriott">عملیات واحد: McCabe, Smith &amp;amp; Harriott — Unit Operations</li>
-        <li data-fa="واکنش‌شناسی: Fogler — Elements of CRE + Levenspiel" data-en="Reaction engineering: Fogler + Levenspiel">واکنش‌شناسی: Fogler + Levenspiel</li>
-        <li data-fa="تقطیر و جداسازی: Kister — Distillation Design + Seader" data-en="Distillation &amp;amp; separations: Kister + Seader">تقطیر و جداسازی: Kister — Distillation Design + Seader</li>
-      </ul>
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><rect class="eqf" x="30" y="40" width="140" height="44" rx="8"/><rect class="eqs" x="30" y="40" width="140" height="44" rx="8"/><line class="eqt" x1="45" y1="40" x2="45" y2="84"/><line class="eqt" x1="60" y1="40" x2="60" y2="84"/><line class="eqt" x1="75" y1="40" x2="75" y2="84"/><line class="eqt" x1="90" y1="40" x2="90" y2="84"/><line class="eqt" x1="105" y1="40" x2="105" y2="84"/><line class="eqt" x1="120" y1="40" x2="120" y2="84"/><line class="eqt" x1="135" y1="40" x2="135" y2="84"/><line class="eqt" x1="150" y1="40" x2="150" y2="84"/><circle class="eqs" cx="100" cy="24" r="11"/><line class="eqs" x1="90" y1="26" x2="92" y2="17"/><line class="eqs" x1="110" y1="26" x2="108" y2="17"/><line class="eqs" x1="96" y1="31" x2="104" y2="31"/><line class="eqs" x1="100" y1="13" x2="100" y2="4"/></svg>
+      </div>
+      <h4><span data-fa="🆒 خنک‌کن هوایی (Fin-Fan)" data-en="🆒 Air Cooler (Fin-Fan)">🆒 خنک‌کن هوایی (Fin-Fan)</span></h4>
+      <p data-fa="بصحببت فین‌های فلزی روی لوله‌ها و فن بزرگ در بالای آن — وقتی آب خنک‌کننده کمیاب یا گران است (مناطق کویری)، انتخاب نخست." data-en="Finned tubes with a big fan on top — the first choice when cooling water is scarce (desert refineries).">فین‌های فلزی روی لوله‌ها و فن بزرگ در بالای آن — وقتی آب خنک‌کننده کمیاب یا گران است (مناطق کویری)، انتخاب نخست.</p>
     </div>
-    <div class="rm-group reveal">
-      <h4 data-fa="📕 مراجع صنعتی دائمی" data-en="📕 Industrial Handbooks">📕 مراجع صنعتی دائمی</h4>
-      <ul>
-        <li data-fa="Perry's Chemical Engineers' Handbook — کتاب مقدس مهندس شیمی" data-en="Perry's Handbook — the bible of chemical engineering">Perry's Chemical Engineers' Handbook — کتاب مقدس مهندس شیمی</li>
-        <li data-fa="GPSA Engineering Data Book — مرجع تجهیزات گازی" data-en="GPSA Data Book — gas processing reference">GPSA Engineering Data Book — مرجع تجهیزات گازی</li>
-        <li data-fa="API Standards و CCPS — استانداردها و ایمنی فرآیند" data-en="API Standards &amp;amp; CCPS guidelines">API Standards و CCPS — استانداردها و ایمنی فرآیند</li>
-      </ul>
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><rect class="eqf" x="28" y="48" width="144" height="26" rx="13"/><rect class="eqs" x="28" y="48" width="144" height="26" rx="13"/><path class="eqs" d="M28 100 q60 -20 144 0" fill="none"/><line class="eqs" x1="10" y1="61" x2="28" y2="61"/><line class="eqs" x1="172" y1="61" x2="190" y2="61"/><line class="eqt" x1="60" y1="50" x2="140" y2="50"/><line class="eqt" x1="60" y1="58" x2="140" y2="58"/><line class="eqt" x1="60" y1="66" x2="140" y2="66"/><line class="eqs" x1="80" y1="74" x2="80" y2="88"/><line class="eqs" x1="120" y1="74" x2="120" y2="88"/></svg>
+      </div>
+      <h4><span data-fa="🌱 لوله در لوله (Double Pipe)" data-en="🌱 Double Pipe">🌱 لوله در لوله</span></h4>
+      <p data-fa="یک لوله داخل لوله‌ی دیگری؛ ساده و ارزان برای دبی کم و اختلاف دمای زیاد؛ با فین، سطح آن چند برابر می‌شود." data-en="One pipe inside another; simple and cheap for low flows and extreme ΔT, and fins multiply its area.">یک لوله داخل لوله‌ی دیگری؛ ساده و ارزان برای دبی کم و اختلاف دمای زیاد؛ با فین، سطح آن چند برابر می‌شود.</p>
+    </div>
+  </div>
+
+  <!-- ---===--- VALVE TYPES ---===--- -->
+  <h3 class="reveal" style="font-size:1.35rem;font-weight:800;margin-top:2.6rem;margin-bottom:1.1rem"><span data-fa="🎛️ انواع شیرهای صنعتی" data-en="🎛️ Industrial Valve Types">🎛️ انواع شیرهای صنعتی</span></h3>
+  <div class="kb-grid">
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><path class="eqf" d="M60 78 L100 50 L140 78 L140 96 L60 96 Z"/><path class="eqs" d="M60 78 L100 50 L140 78"/><line class="eqs" x1="100" y1="50" x2="100" y2="30"/><path class="eqf" d="M70 30 a30 20 0 0 1 60 0 Z"/><path class="eqs" d="M70 30 a30 20 0 0 1 60 0"/><circle class="eqa" cx="100" cy="20" r="4"/><line class="eql" x1="145" y1="20" x2="178" y2="20"/><circle class="eqs" cx="183" cy="20" r="7"/><line class="eqs" x1="35" y1="96" x2="60" y2="96"/><line class="eqs" x1="140" y1="96" x2="165" y2="96"/></svg>
+      </div>
+      <h4><span data-fa="🎯 شیر گلوب (کنترل)" data-en="🎯 Globe — Control Valve">🎯 شیر گلوب (کنترل)</span></h4>
+      <p data-fa="شیر استاندارد کنترل: ساقه و آکتوآتور دارد؛ با سیگنال ۴-۲۰ mA و پوزیشنر، جریان را دقیقاً تنظیم می‌کند." data-en="The standard control valve: stem + actuator; with a 4-20mA signal and positioner, it meters flow precisely.">شیر استاندارد کنترل: ساقه و آکتوآتور دارد؛ با سیگنال ۴-۲۰ mA و پوزیشنر، جریان را دقیقاً تنظیم می‌کند.</p>
+    </div>
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><rect class="eqf" x="55" y="60" width="90" height="36" rx="6"/><rect class="eqs" x="55" y="60" width="90" height="36" rx="6"/><rect class="eqa" x="94" y="72" width="12" height="24"/><line class="eqs" x1="100" y1="60" x2="100" y2="34"/><circle class="eqs" cx="100" cy="28" r="9"/><path class="eqs" d="M100 19 q-4 -6 0 -10"/><line class="eqs" x1="40" y1="78" x2="55" y2="78"/><line class="eqs" x1="145" y1="78" x2="160" y2="78"/></svg>
+      </div>
+      <h4><span data-fa="🚪 شیر گیت (Gate)" data-en="🚪 Gate Valve">🚪 شیر گیت</span></h4>
+      <p data-fa="صفحه‌ای صاف بالا-پایین حرکت می‌کند؛ برای باز/بسته‌ی کامل عالی، برای کنترل (throttle) نامناسب — نشیمن سریع فرسوده می‌شود." data-en="A flat plate slides up/down; great for full open/close, poor for throttling — the seat wears fast.">صفحه‌ای صاف بالا-پایین حرکت می‌کند؛ برای باز/بسته‌ی کامل عالی، برای کنترل (throttle) نامناسب — نشیمن سریع فرسوده می‌شود.</p>
+    </div>
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><rect class="eqf" x="55" y="55" width="90" height="42" rx="8"/><rect class="eqs" x="55" y="55" width="90" height="42" rx="8"/><circle class="eqs" cx="100" cy="76" r="15"/><line class="eqt" x1="90" y1="66" x2="110" y2="86"/><line class="eqs" x1="100" y1="55" x2="100" y2="34"/><path class="eqs" d="M100 30 l22 -8"/><circle class="eqs" cx="125" cy="21" r="5"/><line class="eqs" x1="40" y1="76" x2="55" y2="76"/><line class="eqs" x1="145" y1="76" x2="160" y2="76"/></svg>
+      </div>
+      <h4><span data-fa="⚪ شیر توپی (Ball)" data-en="⚪ Ball Valve">⚪ شیر توپی</span></h4>
+      <p data-fa="کره‌ای سوراخ‌دار با چرخش ۹۰ درجه؛ سریع با آب‌بندی کامل — انتخاب همیشگی برای گاز و مخازن LPG." data-en="A bored sphere rotates 90°; fast, tight shut-off — a must for gas and LPG service.">کره‌ای سوراخ‌دار با چرخش ۹۰ درجه؛ سریع با آب‌بندی کامل — انتخاب همیشگی برای گاز و مخازن LPG.</p>
+    </div>
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><rect class="eqf" x="55" y="55" width="90" height="42" rx="8"/><rect class="eqs" x="55" y="55" width="90" height="42" rx="8"/><ellipse class="eqa" cx="100" cy="76" rx="6" ry="18"/><line class="eqs" x1="100" y1="58" x2="100" y2="34"/><line class="eqs" x1="100" y1="34" x2="126" y2="24"/><line class="eqs" x1="40" y1="76" x2="55" y2="76"/><line class="eqs" x1="145" y1="76" x2="160" y2="76"/></svg>
+      </div>
+      <h4><span data-fa="🦋 شیر پروانه‌ای (Butterfly)" data-en="🦋 Butterfly Valve">🦋 شیر پروانه‌ای</span></h4>
+      <p data-fa="قرصی چرخان داخل بدنه؛ سبک و کم‌جا — پرکاربرد در مسیرهای بزرگ آب خنک‌کننده." data-en="A rotating disc inside; light and compact — typical for big cooling-water headers.">قرصی چرخان داخل بدنه؛ سبک و کم‌جا — پرکاربرد در مسیرهای بزرگ آب خنک‌کننده.</p>
+    </div>
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><path class="eqs" d="M55 96 L55 55 h90 v41 Z"/><rect class="eqs" x="55" y="55" width="90" height="41" rx="4"/><path class="eqa" d="M80 70 q20 -16 40 0 v8 q-20 16 -40 0 Z"/><line class="eqs" x1="100" y1="55" x2="100" y2="34"/><rect class="eqf" x="76" y="18" width="48" height="18" rx="9"/><rect class="eqs" x="76" y="18" width="48" height="18" rx="9"/><line class="eqs" x1="40" y1="88" x2="55" y2="88"/><line class="eqs" x1="145" y1="88" x2="160" y2="88"/></svg>
+      </div>
+      <h4><span data-fa="🩹 شیر دیافراگمی (Diaphragm)" data-en="🩹 Diaphragm Valve">🩹 شیر دیافراگمی</span></h4>
+      <p data-fa="دیافراگم انعطاف‌پذیر، سیال را از فلز جدا می‌کند — انتخاب خالص برای سیالات خورنده و دوغاب‌ها." data-en="A flexible membrane isolates the fluid from metal parts — the pure choice for corrosive fluids and slurries.">دیافراگم انعطاف‌پذیر، سیال را از فلز جدا می‌کند — انتخاب خالص برای سیالات خورنده و دوغاب‌ها.</p>
+    </div>
+  </div>
+
+  <!-- ---===--- VESSEL TYPES ---===--- -->
+  <h3 class="reveal" style="font-size:1.35rem;font-weight:800;margin-top:2.6rem;margin-bottom:1.1rem"><span data-fa="🫙 انواع مخازن صنعتی" data-en="🫙 Industrial Vessel Types">🫙 انواع مخازن صنعتی</span></h3>
+  <div class="kb-grid">
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><rect class="eqf" x="25" y="65" width="150" height="40" rx="20"/><rect class="eqs" x="25" y="65" width="150" height="40" rx="20"/><line class="eql" x1="32" y1="88" x2="168" y2="88"/><path class="eqs" d="M130 71 l12 -6 l12 6"/><line class="eqs" x1="10" y1="78" x2="25" y2="78"/><line class="eqs" x1="30" y1="112" x2="42" y2="112"/><line class="eqs" x1="160" y1="105" x2="172" y2="105"/></svg>
+      </div>
+      <h4><span data-fa="💠 مخزن ضربه‌گیر (KO Drum)" data-en="💠 Knock-Out (KO) Drum">💠 مخزن ضربه‌گیر (KO)</span></h4>
+      <p data-fa="قطره‌های مایع را از گاز می‌گیرد تا کمپرسورها سالم بمانند؛ پد دمیستر (Demister) قطره‌های ریز را نیز می‌گیرد." data-en="Knocks liquid droplets out of the gas to protect compressors; the demister pad catches fine mist too.">قطره‌های مایع را از گاز می‌گیرد تا کمپرسورها سالم بمانند؛ پد دمیستر (Demister) قطره‌های ریز را نیز می‌گیرد.</p>
+    </div>
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><circle class="eqf" cx="100" cy="55" r="34"/><circle class="eqs" cx="100" cy="55" r="34"/><line class="eql" x1="66" y1="55" x2="134" y2="55"/><line class="eqs" x1="76" y1="86" x2="70" y2="112"/><line class="eqs" x1="124" y1="86" x2="130" y2="112"/><line class="eqs" x1="100" y1="89" x2="100" y2="112"/><line class="eqs" x1="66" y1="112" x2="134" y2="112"/></svg>
+      </div>
+      <h4><span data-fa="🔴 مخزن کره‌ای (Horton Sphere)" data-en="🔴 LPG Horton Sphere">🔴 مخزن کره‌ای (هورتون)</span></h4>
+      <p data-fa="کره کمترین تنش ممکن را در فشار بالا دارد؛ LPG و بوتان را می‌توان با خیال راحت در حدود ۸ بار ذخیره کرد." data-en="A sphere has minimum membrane stress at high pressure; LPG &amp; butane store safely at ~8 bar.">کره کمترین تنش ممکن را در فشار بالا دارد؛ LPG و بوتان را می‌توان با خیال راحت در حدود ۸ بار ذخیره کرد.</p>
+    </div>
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><rect class="eqf" x="40" y="35" width="120" height="50" rx="25"/><rect class="eqs" x="40" y="35" width="120" height="50" rx="25"/><line class="eql" x1="48" y1="60" x2="152" y2="60"/><path class="eqs" d="M55 85 l-8 25 M145 85 l8 25 M40 110 h16 M144 110 h16"/><line class="eqs" x1="100" y1="35" x2="100" y2="20"/></svg>
+      </div>
+      <h4><span data-fa="💊 مخزن بولت (Bullet Tank)" data-en="💊 Bullet Tank">💊 مخزن بولت</span></h4>
+      <p data-fa="استوانه‌های افقی دو سر گِرد روی پایه‌های سدل (Saddle)؛ کلاسیک ذخیره‌ی گازهای مایع و محصولات پتروشیمی." data-en="Horizontal capsules on saddle supports; an LPG/butane refinery classic.">استوانه‌های افقی دو سر گِرد روی پایه‌های سدل (Saddle)؛ کلاسیک ذخیره‌ی گازهای مایع و محصولات پتروشیمی.</p>
+    </div>
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><path class="eqf" d="M60 15 h80 l8 55 h-96 Z"/><path class="eqs" d="M60 15 h80 l8 55 h-96 Z"/><path class="eqs" d="M52 70 h96 l-38 30 h-20 Z"/><line class="eqs" x1="70" y1="112" x2="70" y2="118"/><line class="eqs" x1="90" y1="112" x2="90" y2="118"/><line class="eqs" x1="110" y1="112" x2="110" y2="118"/><line class="eqs" x1="130" y1="112" x2="130" y2="118"/><line class="eqa" d="M96 108 h8 v10 h-8 Z"/></svg>
+      </div>
+      <h4><span data-fa="🏺 سیلو / هاپر" data-en="🏺 Silo &amp; Hopper">🏺 سیلو / هاپر</span></h4>
+      <p data-fa="ذخیره‌ی جامدات و پودر کاتالیست؛ اگر زاویه‌ی مخروط تندتر از زاویه‌ی بحرانی باشد، مواد روان و پیوسته می‌ریزند." data-en="Stores solids and catalyst powders; a cone angle above the critical angle keeps flow moving.">ذخیره‌ی جامدات و پودر کاتالیست؛ اگر زاویه‌ی مخروط تندتر از زاویه‌ی بحرانی باشد، مواد روان و پیوسته می‌ریزند.</p>
+    </div>
+  </div>
+
+  <!-- ---===--- BOILER TYPES ---===--- -->
+  <h3 class="reveal" style="font-size:1.35rem;font-weight:800;margin-top:2.6rem;margin-bottom:1.1rem"><span data-fa="♨️ انواع بویلر" data-en="♨️ Boiler Types">♨️ انواع بویلر</span></h3>
+  <div class="kb-grid">
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><rect class="eqf" x="30" y="40" width="140" height="55" rx="20"/><rect class="eqs" x="30" y="40" width="140" height="55" rx="20"/><line class="eqt" x1="55" y1="60" x2="150" y2="60"/><line class="eqt" x1="55" y1="68" x2="150" y2="68"/><line class="eqt" x1="55" y1="76" x2="150" y2="76"/><path class="eqa" d="M45 110 c3 5 9 4 9 9 a9 9 0 0 1 -18 0 c0 -5 6 -4 9 -9 Z"/><rect class="eqf" x="85" y="25" width="30" height="18" rx="4"/><rect class="eqs" x="85" y="25" width="30" height="18" rx="4"/><line class="eqs" x1="100" y1="25" x2="100" y2="12"/></svg>
+      </div>
+      <h4><span data-fa="💠 آتش‌درلوله (Fire-Tube)" data-en="💠 Fire-Tube Boiler">💠 آتش‌درلوله</span></h4>
+      <p data-fa="گاز داغ درون لوله‌ها در میان آب می‌گردد؛ فشار کم تا متوسط و تولید بخار سریع — در بویلرهای پکیجی رایج." data-en="Flue gas runs inside tubes surrounded by water; low/medium pressure, fast steam — common in packaged units.">گاز داغ درون لوله‌ها در میان آب می‌گردد؛ فشار کم تا متوسط و تولید بخار سریع — در بویلرهای پکیجی رایج.</p>
+    </div>
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><rect class="eqf" x="45" y="28" width="110" height="22" rx="11"/><rect class="eqs" x="45" y="28" width="110" height="22" rx="11"/><rect class="eqf" x="70" y="100" width="60" height="14" rx="7"/><rect class="eqs" x="70" y="100" width="60" height="14" rx="7"/><path class="eqs" d="M60 50 L95 100 M140 50 L105 100 M60 50 q40 -8 80 0"/><path class="eqa" d="M100 118 c0 4 6 4 6 8 a6 6 0 0 1 -12 0 c0 -4 6 -4 6 -8 Z"/><line class="eqs" x1="100" y1="28" x2="100" y2="12"/></svg>
+      </div>
+      <h4><span data-fa="🌀 آب‌درلوله (Water-Tube)" data-en="🌀 Water-Tube Boiler">🌀 آب‌درلوله</span></h4>
+      <p data-fa="آب داخل لوله‌ها از میان شعله می‌گذرد؛ فشار بالا و بخار زیاد — استاندارد نیروگاه و پتروشیمی (نوع D)." data-en="Water runs inside tubes through the flame; high pressure and capacity — the power/petrochemical standard (D-type).">آب داخل لوله‌ها از میان شعله می‌گذرد؛ فشار بالا و بخار زیاد — استاندارد نیروگاه و پتروشیمی (نوع D).</p>
+    </div>
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><rect class="eqf" x="30" y="25" width="140" height="75" rx="10"/><rect class="eqs" x="30" y="25" width="140" height="75" rx="10"/><line class="eql" x1="45" y1="25" x2="45" y2="100"/><line class="eql" x1="155" y1="25" x2="155" y2="100"/><rect class="eqf" x="70" y="45" width="60" height="30" rx="8"/><rect class="eqs" x="70" y="45" width="60" height="30" rx="8"/><line class="eqa" x1="60" y1="60" x2="140" y2="60"/><line class="eqs" x1="100" y1="75" x2="100" y2="96"/></svg>
+      </div>
+      <h4><span data-fa="📦 بویلر پکیج" data-en="📦 Package Boiler">📦 بویلر پکیج</span></h4>
+      <p data-fa="همه‌چیز روی یک اسکید: دیگ، مشعل، پمپ و درام بخار — نصب و راه‌اندازی سریع؛ مناسب پروژه‌های زمان‌مهم." data-en="A complete skid: boiler, burner, pumps and steam drum — plug-and-play with fast commissioning.">همه‌چیز روی یک اسکید: دیگ، مشعل، پمپ و درام بخار — نصب و راه‌اندازی سریع؛ مناسب پروژه‌های زمان‌مهم.</p>
+    </div>
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><rect class="eqf" x="45" y="28" width="110" height="22" rx="11"/><rect class="eqs" x="45" y="28" width="110" height="22" rx="11"/><rect class="eqf" x="70" y="100" width="60" height="14" rx="7"/><rect class="eqs" x="70" y="100" width="60" height="14" rx="7"/><path class="eqs" d="M60 50 L95 100 M140 50 L105 100"/><rect class="eqf" x="28" y="60" width="20" height="40" rx="6"/><rect class="eqs" x="28" y="60" width="20" height="40" rx="6"/><line class="pipe" x1="48" y1="80" x2="60" y2="80"/><text class="svgt" x="6" y="72">Flue</text></svg>
+      </div>
+      <h4><span data-fa="♻️ اچ‌آر‌اس‌جی (HRSG)" data-en="♻️ HRSG (Waste-Heat)">♻️ HRSG — بازیاب دود</span></h4>
+      <p data-fa="گاز خروجی توربین گازی را بدون سوخت‌گیری به بخار تبدیل می‌کند — قلب نیروگاه چرخه‌ی ترکیبی." data-en="Converts hot gas-turbine exhaust to steam without firing — the heart of combined-cycle plants.">گاز خروجی توربین گازی را بدون سوخت‌گیری به بخار تبدیل می‌کند — قلب نیروگاه چرخه‌ی ترکیبی.</p>
+    </div>
+  </div>
+
+  <!-- ---===--- CONDENSER TYPES ---===--- -->
+  <h3 class="reveal" style="font-size:1.35rem;font-weight:800;margin-top:2.6rem;margin-bottom:1.1rem"><span data-fa="🧊 انواع کندانسورها" data-en="🧊 Condenser Types">🧊 انواع کندانسورها</span></h3>
+  <div class="kb-grid">
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><rect class="eqf" x="35" y="45" width="130" height="34" rx="17"/><rect class="eqs" x="35" y="45" width="130" height="34" rx="17"/><line class="eqt" x1="50" y1="53" x2="150" y2="53"/><line class="eqt" x1="50" y1="62" x2="150" y2="62"/><line class="eqt" x1="50" y1="71" x2="150" y2="71"/><line class="eqs" x1="100" y1="20" x2="100" y2="45"/><line class="eqa" d="M94 20 h12 l-6 -8 Z"/><line class="eqs" x1="10" y1="62" x2="35" y2="62"/><text class="svgt" x="3" y="50">CW</text><line class="eqs" x1="100" y1="79" x2="100" y2="100"/><line class="eqa" d="M94 94 h12 l-6 8 Z"/></svg>
+      </div>
+      <h4><span data-fa="🌫️ کندانسور سطحی" data-en="🌫️ Surface Condenser">🌫️ کندانسور سطحی</span></h4>
+      <p data-fa="بخار در پوسته و آب خنک‌کننده در لوله‌ها؛ خروجی توربین بخار را در شرایط خلأ مایع می‌کند." data-en="Steam in the shell, cooling water in tubes; under vacuum it condenses the turbine exhaust.">بخار در پوسته و آب خنک‌کننده در لوله‌ها؛ خروجی توربین بخار را در شرایط خلأ مایع می‌کند.</p>
+    </div>
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><rect class="eqf" x="30" y="45" width="140" height="40" rx="8"/><rect class="eqs" x="30" y="45" width="140" height="40" rx="8"/><line class="eqt" x1="45" y1="45" x2="45" y2="85"/><line class="eqt" x1="60" y1="45" x2="60" y2="85"/><line class="eqt" x1="75" y1="45" x2="75" y2="85"/><line class="eqt" x1="90" y1="45" x2="90" y2="85"/><line class="eqt" x1="105" y1="45" x2="105" y2="85"/><line class="eqt" x1="120" y1="45" x2="120" y2="85"/><line class="eqt" x1="135" y1="45" x2="135" y2="85"/><line class="eqt" x1="150" y1="45" x2="150" y2="85"/><path class="eqs" d="M55 95 l8 12 M145 95 l-8 12"/><line class="pipe" x1="100" y1="28" x2="100" y2="45"/><text class="svgt" x="150" y="20">Air</text></svg>
+      </div>
+      <h4><span data-fa="🌀 کندانسور هوایی (ACC)" data-en="🌀 Air-Cooled Condenser">🌀 کندانسور هوایی</span></h4>
+      <p data-fa="فن هوای آزاد را از روی فین‌ها می‌کشد؛ بدون نیاز به آب خنک‌کن — مناسب مناطق کم‌آب." data-en="Fans draw air over fins — zero cooling water, great where water is scarce.">فن هوای آزاد را از روی فین‌ها می‌کشد؛ بدون نیاز به آب خنک‌کن — مناسب مناطق کم‌آب.</p>
+    </div>
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><path class="eqf" d="M40 40 h120 l-30 60 h-60 Z"/><path class="eqs" d="M40 40 h120 l-30 60 h-60 Z"/><line class="eqt" x1="55" y1="50" x2="145" y2="50"/><line class="eqt" x1="60" y1="60" x2="140" y2="60"/><line class="eqt" x1="65" y1="70" x2="135" y2="70"/><line class="eqs" x1="100" y1="20" x2="100" y2="40"/><line class="eqs" x1="100" y1="100" x2="100" y2="112"/></svg>
+      </div>
+      <h4><span data-fa="🧀 کندانسور صفحه‌ای" data-en="🧀 Plate Condenser">🧀 کندانسور صفحه‌ای</span></h4>
+      <p data-fa="صفحات موج‌دار با فاصله‌ی میلی‌متری؛ در خلأهای بالا و سرویس‌های تمیز به‌کار می‌رود." data-en="Corrugated plates with millimetre gaps; used in deep vacuum and clean services.">صفحات موج‌دار با فاصله‌ی میلی‌متری؛ در خلأهای بالا و سرویس‌های تمیز به‌کار می‌رود.</p>
+    </div>
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><path class="eqf" d="M40 40 q0 -15 20 -15 h30"/><path class="eqs" d="M40 40 q0 -15 20 -15 h30"/><path class="eqs" d="M40 60 q0 -60 100 -40 v40"/><path class="eqs" d="M40 60 q0 -60 100 -40"/><line class="eqs" x1="40" y1="12" x2="140" y2="12"/><line class="eqs" x1="60" y1="40" x2="60" y2="66"/><line class="eqs" x1="140" y1="66" x2="140" y2="12"/><path class="eqa" d="M70 55 q15 10 30 0"/><path class="eqa" d="M90 55 q15 10 30 0"/><line class="eqs" x1="140" y1="90" x2="140" y2="112"/><text class="svgt" x="34" y="4">Steam</text></svg>
+      </div>
+      <h4><span data-fa="💦 کندانسور اژکتوری" data-en="💦 Ejector (Direct-Contact)">💦 کندانسور اژکتوری</span></h4>
+      <p data-fa="آب محرک با بخار مخلوط می‌شود و مستقیماً آن را مایع می‌کند و هم‌زمان خلأ می‌سازد — نقش کلاسیک بارومتریک." data-en="Motive water mixes with vapor, condensing it directly while pulling vacuum — classic barometric duty.">آب محرک با بخار مخلوط می‌شود و مستقیماً آن را مایع می‌کند و هم‌زمان خلأ می‌سازد — نقش کلاسیک بارومتریک.</p>
+    </div>
+  </div>
+
+  <!-- ---===--- CATALYST TYPES ---===--- -->
+  <h3 class="reveal" style="font-size:1.35rem;font-weight:800;margin-top:2.6rem;margin-bottom:1.1rem"><span data-fa="🧬 انواع کاتالیست‌های صنعت" data-en="🧬 Major Industrial Catalysts">🧬 انواع کاتالیست‌های صنعت</span></h3>
+  <div class="kb-grid">
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><rect class="eqs" x="80" y="18" width="30" height="84" rx="10"/><line class="eql" x1="85" y1="48" x2="105" y2="48"/><line class="eql" x1="85" y1="70" x2="105" y2="70"/><circle class="eqa" cx="90" cy="35" r="3"/><circle class="eqa" cx="99" cy="40" r="3"/><circle class="eqa" cx="94" cy="57" r="3"/><circle class="eqa" cx="101" cy="63" r="3"/><circle class="eqa" cx="90" cy="80" r="3"/><rect class="eqf" x="62" y="8" width="66" height="18" rx="9"/><rect class="eqs" x="62" y="8" width="66" height="18" rx="9"/><line class="pipe" x1="95" y1="102" x2="95" y2="116"/></svg>
+      </div>
+      <h4><span data-fa="😮 کاتالیست زئولیتی FCC" data-en="😮 FCC Zeolite">😮 زئولیت FCC</span></h4>
+      <p data-fa="بلورهای زئولیت آلومینوسیلیکاتی؛ در راکتور FCC نفت سنگین را می‌شکنند و بنزین می‌سازند — قلب واحد کراکینگ." data-en="Aluminosilicate zeolite crystals; crack heavy oil into gasoline — the heart of the cat-cracker.">بلورهای زئولیت آلومینوسیلیکاتی؛ در راکتور FCC نفت سنگین را می‌شکنند و بنزین می‌سازند — قلب واحد کراکینگ.</p>
+    </div>
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><rect class="eqf" x="70" y="25" width="60" height="80" rx="14"/><rect class="eqs" x="70" y="25" width="60" height="80" rx="14"/><rect class="eqa" x="80" y="45" width="40" height="38" rx="4"/><line class="eql" x1="76" y1="35" x2="124" y2="35"/><line class="eql" x1="76" y1="92" x2="124" y2="92"/><line class="pipe" x1="100" y1="20" x2="100" y2="25"/><line class="pipe" x1="100" y1="105" x2="100" y2="116"/></svg>
+      </div>
+      <h4><span data-fa="⚖️ نیکل/مولیبدن — هیدروتریتینگ" data-en="⚖️ NiMo / CoMo — Hydrotreating">⚖️ نیکل/مولیبدن</span></h4>
+      <p data-fa="NiMo یا CoMo روی آلومینا؛ با هیدروژن، گوگرد و نیتروژن را از خوراک پاک می‌کند — پیش‌پردازش هر پالایشگاه." data-en="NiMo/CoMo on alumina; removes sulfur and nitrogen with hydrogen — the pre-treatment of every refinery.">NiMo یا CoMo روی آلومینا؛ با هیدروژن، گوگرد و نیتروژن را از خوراک پاک می‌کند — پیش‌پردازش هر پالایشگاه.</p>
+    </div>
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><rect class="eqf" x="70" y="25" width="60" height="80" rx="14"/><rect class="eqs" x="70" y="25" width="60" height="80" rx="14"/><circle class="eqa" cx="88" cy="42" r="2.6"/><circle class="eqa" cx="106" cy="48" r="2.6"/><circle class="eqa" cx="94" cy="60" r="2.6"/><circle class="eqa" cx="112" cy="68" r="2.6"/><circle class="eqa" cx="86" cy="76" r="2.6"/><circle class="eqa" cx="104" cy="86" r="2.6"/><line class="pipe" x1="100" y1="20" x2="100" y2="25"/><line class="pipe" x1="100" y1="105" x2="100" y2="116"/></svg>
+      </div>
+      <h4><span data-fa="💰 پلاتین-رنیوم — رفرمینگ" data-en="💰 Pt/Re — Catalytic Reforming">💰 پلاتین-رنیوم</span></h4>
+      <p data-fa="پلاتین-رنیوم روی آلومینای کلردار؛ نفتا را به آروماتیک‌های اکتان بالا تبدیل می‌کند — گران، ولی بسیار گزینش‌پذیر." data-en="Pt-Re on chlorided alumina; upgrades naphtha into high-octane aromatics. Precious but selective.">پلاتین-رنیوم روی آلومینای کلردار؛ نفتا را به آروماتیک‌های اکتان بالا تبدیل می‌کند — گران، ولی بسیار گزینش‌پذیر.</p>
+    </div>
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><rect class="eqf" x="60" y="30" width="80" height="70" rx="12"/><rect class="eqs" x="60" y="30" width="80" height="70" rx="12"/><rect class="eqa" x="72" y="48" width="56" height="20" rx="4"/><rect class="eqa" x="72" y="72" width="56" height="20" rx="4"/><line class="pipe" x1="100" y1="25" x2="100" y2="30"/><line class="pipe" x1="100" y1="100" x2="100" y2="112"/></svg>
+      </div>
+      <h4><span data-fa="🪙 آهن — هابر-بوش (NH₃)" data-en="🪙 Fe Catalyst — Haber–Bosch">🪙 آهن — هابر-بوش</span></h4>
+      <p data-fa="آهن با پروموترهای K₂O و Al₂O₃؛ نیتروژن و هیدروژن را در فشار و دمای بالا به آمونیاک می‌رساند — غذای نیمی از جهان." data-en="Iron with K₂O/Al₂O₃ promoters; N₂ + H₂ to NH₃ at high P/T — feeding half the world.">آهن با پروموترهای K₂O و Al₂O₃؛ نیتروژن و هیدروژن را در فشار و دمای بالا به آمونیاک می‌رساند — غذای نیمی از جهان.</p>
+    </div>
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><rect class="eqf" x="60" y="30" width="80" height="70" rx="12"/><rect class="eqs" x="60" y="30" width="80" height="70" rx="12"/><rect class="eqa" x="72" y="45" width="56" height="16" rx="4"/><rect class="eqa" x="72" y="66" width="56" height="16" rx="4"/><line class="eql" x1="72" y1="86" x2="128" y2="86"/><line class="pipe" x1="100" y1="25" x2="100" y2="30"/><line class="pipe" x1="100" y1="100" x2="100" y2="112"/></svg>
+      </div>
+      <h4><span data-fa="🧴 مس و روی — متانول" data-en="🧴 Cu/ZnO — Methanol">🧴 مس/روی — متانول</span></h4>
+      <p data-fa="Cu/ZnO/Al₂O₃؛ CO و CO₂ با هیدروژن به متانول تبدیل می‌شوند — دمای پایین، تعادل را به نفع واکنش می‌آورد." data-en="Cu/ZnO/Al₂O₃; CO/CO₂ + H₂ to methanol — low temperature shifts the equilibrium the right way.">Cu/ZnO/Al₂O₃؛ CO و CO₂ با هیدروژن به متانول تبدیل می‌شوند — دمای پایین، تعادل را به نفع واکنش می‌آورد.</p>
+    </div>
+  </div>
+
+  <!-- ---===--- PUMP & COMPRESSOR TYPES ---===--- -->
+  <h3 class="reveal" style="font-size:1.35rem;font-weight:800;margin-top:2.6rem;margin-bottom:1.1rem"><span data-fa="🌀 انواع پمپ‌ها و کمپرسورها" data-en="🌀 Pump &amp; Compressor Types">🌀 انواع پمپ‌ها و کمپرسورها</span></h3>
+  <div class="kb-grid">
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><circle class="eqf" cx="95" cy="62" r="30"/><circle class="eqs" cx="95" cy="62" r="30"/><circle class="eqa" cx="95" cy="62" r="7"/><line class="eqs" x1="95" y1="40" x2="95" y2="55"/><line class="eqs" x1="95" y1="69" x2="95" y2="84"/><line class="eqs" x1="73" y1="62" x2="88" y2="62"/><line class="eqs" x1="102" y1="62" x2="117" y2="62"/><line class="eqt" x1="83" y1="50" x2="92" y2="59"/><line class="eqt" x1="98" y1="65" x2="107" y2="74"/><line class="eqs" x1="95" y1="92" x2="95" y2="112"/><path class="eqa" d="M89 96 h12 l-6 10 Z"/><line class="eqs" x1="125" y1="62" x2="145" y2="62"/></svg>
+      </div>
+      <h4><span data-fa="💧 پمپ سانتریفیوژ" data-en="💧 Centrifugal Pump">💧 پمپ سانتریفیوژ</span></h4>
+      <p data-fa="پروانه گردان به سیال سرعت می‌دهد و حلزونی (Volute) سرعت را به فشار تبدیل می‌کند؛ منحنی H–Q قلب انتخاب پمپ است." data-en="A spinning impeller gives the fluid velocity; the volute turns it into pressure. The H–Q curve is the heart of pump selection.">پروانه گردان به سیال سرعت می‌دهد و حلزونی (Volute) سرعت را به فشار تبدیل می‌کند؛ منحنی H–Q قلب انتخاب پمپ است.</p>
+    </div>
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><rect class="eqf" x="70" y="35" width="24" height="55" rx="5"/><rect class="eqs" x="70" y="35" width="24" height="55" rx="5"/><rect class="eqa" x="73" y="42" width="18" height="14"/><line class="eqs" x1="82" y1="56" x2="82" y2="82"/><circle class="eqs" cx="82" cy="90" r="9"/><polygon class="eqa" points="76,88 88,88 82,80"/><line class="eqs" x1="35" y1="62" x2="70" y2="62"/><path class="eqa" d="M50 56 h12 l-5 10 Z"/><line class="eqs" x1="94" y1="62" x2="130" y2="62"/><path class="eqa" d="M110 66 h12 l-5 -10 Z"/></svg>
+      </div>
+      <h4><span data-fa="🧲 پمپ رفت‌وبرگشتی (دوزینگ)" data-en="🧲 Reciprocating / Metering Pump">🧲 پمپ رفت‌وبرگشتی</span></h4>
+      <p data-fa="پیستون مایع را از سوپاپ‌های یک‌طرفه عبور می‌دهد؛ برای دبی کم و فشار زیاد (تزریق مواد شیمیایی) بی‌رقیب است." data-en="A piston pushes liquid through check valves; unbeatable for low flow and high pressure — the classic metering/dosing pump.">پیستون مایع را از سوپاپ‌های یک‌طرفه عبور می‌دهد؛ برای دبی کم و فشار زیاد (تزریق مواد شیمیایی) بی‌رقیب است.</p>
+    </div>
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><rect class="eqf" x="25" y="45" width="150" height="32" rx="10"/><rect class="eqs" x="25" y="45" width="150" height="32" rx="10"/><circle class="eqs" cx="60" cy="61" r="11"/><circle class="eqa" cx="60" cy="61" r="3.5"/><circle class="eqs" cx="100" cy="61" r="11"/><circle class="eqa" cx="100" cy="61" r="3.5"/><circle class="eqs" cx="140" cy="61" r="11"/><circle class="eqa" cx="140" cy="61" r="3.5"/><line class="eqs" x1="87" y1="61" x2="89" y2="61"/><line class="eqs" x1="25" y1="61" x2="8" y2="61"/><path class="eqa" d="M14 55 h12 l-5 10 Z"/><line class="eqa" x1="60" y1="30" x2="60" y2="45"/><line class="eqa" x1="100" y1="30" x2="100" y2="45"/><line class="eqa" x1="140" y1="30" x2="140" y2="45"/></svg>
+      </div>
+      <h4><span data-fa="🌪️ کمپرسور سانتریفیوژ (چندطبقه)" data-en="🌪️ Centrifugal Compressor">🌪️ کمپرسور سانتریفیوژ</span></h4>
+      <p data-fa="چند طبقه‌ی چرخان گاز را تا فشار بالا می‌برانند؛ قلب پالایشگاه و پتروشیمی — اما پدیده‌ی Surge باید جدی کنترل شود." data-en="Multiple spinning stages raise gas pressure; the heart of refineries — but surge must be carefully controlled.">چند طبقه‌ی چرخان گاز را تا فشار بالا می‌برانند؛ قلب پالایشگاه و پتروشیمی — اما پدیده‌ی Surge باید جدی کنترل شود.</p>
+    </div>
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><rect class="eqf" x="40" y="40" width="70" height="46" rx="10"/><rect class="eqs" x="40" y="40" width="70" height="46" rx="10"/><rect class="eqa" x="55" y="52" width="14" height="22"/><line class="eqs" x1="62" y1="52" x2="62" y2="26"/><circle class="eqa" cx="62" cy="22" r="6"/><line class="eql" x1="48" y1="80" x2="102" y2="80"/><line class="eqs" x1="110" y1="63" x2="150" y2="63"/><path class="eqa" d="M132 57 h12 l-5 12 Z"/><path class="eqt" d="M46 30 h8 M58 30 h8 M70 30 h8"/></svg>
+      </div>
+      <h4><span data-fa="🔨 کمپرسور پیستونی" data-en="🔨 Reciprocating Compressor">🔨 کمپرسور پیستونی</span></h4>
+      <p data-fa="گاز با پیستون در سیلندر فشرده می‌شود؛ برای فشارهای خیلی بالا (LPG، هیدروژن، هوای ابزار پر فشار) انتخاب می‌شود." data-en="A piston squeezes gas inside a cylinder; the choice for very high pressures (LPG, hydrogen, high-pressure air).">گاز با پیستون در سیلندر فشرده می‌شود؛ برای فشارهای خیلی بالا (LPG، هیدروژن، هوای ابزار پر فشار) انتخاب می‌شود.</p>
+    </div>
+  </div>
+
+  <!-- ---===--- COOLING TOWER TYPES ---===--- -->
+  <h3 class="reveal" style="font-size:1.35rem;font-weight:800;margin-top:2.6rem;margin-bottom:1.1rem"><span data-fa="🗼 انواع برج‌های خنک‌کننده" data-en="🗼 Cooling Tower Types">🗼 انواع برج‌های خنک‌کننده</span></h3>
+  <div class="kb-grid">
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><path class="eqf" d="M75 18 C85 55 92 78 92 92 L108 92 C108 78 115 55 125 18 Z"/><path class="eqs" d="M75 18 C85 55 92 78 92 92 L108 92 C108 78 115 55 125 18 Z"/><line class="eqs" x1="70" y1="18" x2="130" y2="18"/><path class="eqs" d="M88 92 L88 106 M92 96 L92 112 M96 92 L96 106 M104 92 L104 112 M108 96 L108 106 M112 92 L112 112"/><path class="eqt" d="M92 10 q5 -7 10 0 q5 7 10 0"/><path class="eqt" d="M84 4 q6 -7 12 0 q6 7 12 0"/></svg>
+      </div>
+      <h4><span data-fa="🌫️ برج طبیعی (هذلولوی)" data-en="🌫️ Natural Draft (Hyperbolic)">🌫️ برج طبیعی (هذلولوی)</span></h4>
+      <p data-fa="پوسته‌ی هذلولی بدون فن، هوا را به‌صورت طبیعی مکش می‌کند؛ غول‌های خاکستری نیروگاه‌ها — آن بخار سفیدِ سرشان، آب است نه دود!" data-en="The hyperbolic shell pulls air naturally without fans — the grey giants of power plants. That white plume is water vapor, not smoke!">پوسته‌ی هذلولی بدون فن، هوا را به‌صورت طبیعی مکش می‌کند؛ غول‌های خاکستری نیروگاه‌ها — آن بخار سفیدِ سرشان، آب است نه دود!</p>
+    </div>
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><rect class="eqf" x="60" y="35" width="80" height="70" rx="8"/><rect class="eqs" x="60" y="35" width="80" height="70" rx="8"/><circle class="eqs" cx="100" cy="20" r="12"/><line class="eqs" x1="100" y1="14" x2="100" y2="26"/><line class="eqs" x1="94" y1="20" x2="106" y2="20"/><line class="eql" x1="70" y1="55" x2="130" y2="55"/><line class="eql" x1="70" y1="70" x2="130" y2="70"/><line class="eql" x1="70" y1="85" x2="130" y2="85"/><line class="eqs" x1="35" y1="90" x2="60" y2="90"/><path class="eqa" d="M44 84 h12 l-5 12 Z"/></svg>
+      </div>
+      <h4><span data-fa="🌀 برج فن‌دار (مکانیکی)" data-en="🌀 Mechanical (Forced Draft)">🌀 برج فن‌دار</span></h4>
+      <p data-fa="فن، هوا را از میان پرکندها (Fill) می‌کشد و آب گرم را خنک می‌کند؛ رایج‌ترین نوع در صنایع و ساختمان‌ها." data-en="Fans draw air through the fill to cool hot water; the most common type in plants and buildings.">فن، هوا را از میان پرکندها (Fill) می‌کشد و آب گرم را خنک می‌کند؛ رایج‌ترین نوع در صنایع و ساختمان‌ها.</p>
+    </div>
+    <div class="kb-card reveal">
+      <div class="equip-fig">
+        <svg viewBox="0 0 200 120"><rect class="eqf" x="55" y="30" width="90" height="60" rx="8"/><rect class="eqs" x="55" y="30" width="90" height="60" rx="8"/><path class="eqs" d="M70 96 V42 C86 34 86 50 100 42 C114 34 114 50 130 42 V90"/><circle class="eqs" cx="100" cy="15" r="10"/><line class="eqa" x1="100" y1="15" x2="100" y2="27"/><line class="eqs" x1="35" y1="100" x2="55" y2="100"/><line class="eqs" x1="145" y1="100" x2="165" y2="100"/></svg>
+      </div>
+      <h4><span data-fa="🔒 برج مدار بسته (Hybrid)" data-en="🔒 Closed-Circuit (Hybrid)">🔒 برج مدار بسته</span></h4>
+      <p data-fa="آب کویل داخل لوله‌ها می‌ماند و هرگز با هوای آزاد تماس نمی‌گیرد — ترکیبی از برج خنک‌کن و مبدل؛ آب همیشه تمیز می‌ماند." data-en="The loop water stays inside the coil and never touches open air — a cooling-tower/exchanger hybrid; the water stays clean.">آب کویل داخل لوله‌ها می‌ماند و هرگز با هوای آزاد تماس نمی‌گیرد — ترکیبی از برج خنک‌کن و مبدل؛ آب همیشه تمیز می‌ماند.</p>
+    </div>
+  </div>
+
+  <!-- ---===--- REFERENCES (cards) ---===--- -->
+  <h3 class="reveal" style="font-size:1.35rem;font-weight:800;margin-top:2.8rem;margin-bottom:1.1rem"><span data-fa="📚 مراجع مهم دروس مهندسی شیمی" data-en="📚 ChemEng Course References">📚 مراجع مهم دروس مهندسی شیمی</span></h3>
+  <div class="kb-grid">
+    <div class="kb-card reveal ref-card">
+      <div class="ref-head">
+        <div class="ref-avatar">C&amp;B</div>
+        <h4>Thermodynamics: An Engineering Approach<small data-fa="یونس چنگل و میکائیل بولز" data-en="Yunus Çengel &amp; Michael A. Boles">یونس چنگل و میکائیل بولز</small></h4>
+      </div>
+      <p data-fa="مصوب‌ترین مرجع درس ترمودینامیک ۱ و ۲ — مثال‌های حل‌شده و جداول کامل بخار." data-en="The go-to reference for Thermo 1 &amp; 2 — worked examples and full steam tables.">مصوب‌ترین مرجع درس ترمودینامیک ۱ و ۲ — مثال‌های حل‌شده و جداول کامل بخار.</p>
+      <div class="tags"><span class="tag">McGraw-Hill</span><span class="tag" data-fa="ویرایش ۹" data-en="9th ed.">ویرایش ۹</span></div>
+    </div>
+    <div class="kb-card reveal ref-card">
+      <div class="ref-head">
+        <div class="ref-avatar">SVN</div>
+        <h4>Introduction to Chemical Engineering Thermodynamics<small data-fa="اسمیت، ون‌نس و ابوت" data-en="Smith, Van Ness &amp; Abbott">اسمیت، ون‌نس و ابوت</small></h4>
+      </div>
+      <p data-fa="رویکرد کلاسیک به تعادل فاز، فاگاسیته و معادلات حالت — ترمودینامیک با نگاه مهندسی شیمی." data-en="The classic treatment of phase equilibrium, fugacity and EOS — thermo in ChemEng language.">رویکرد کلاسیک به تعادل فاز، فاگاسیته و معادلات حالت — ترمودینامیک با نگاه مهندسی شیمی.</p>
+      <div class="tags"><span class="tag">McGraw-Hill</span><span class="tag" data-fa="ویرایش ۷" data-en="7th ed.">ویرایش ۷</span></div>
+    </div>
+    <div class="kb-card reveal ref-card">
+      <div class="ref-head">
+        <div class="ref-avatar">GK</div>
+        <h4>Transport Processes and Separation Process Principles<small data-fa="کریستی گای گانکوپلیس" data-en="Christie J. Geankoplis">کریستی گای گانکوپلیس</small></h4>
+      </div>
+      <p data-fa="سه پدیده‌ی انتقال و جداسازی در یک کتاب؛ پایه‌ی مکانیک سیالات و عملیات واحد." data-en="Momentum, heat and mass transport plus separations in one book; the fluids/UO foundation.">سه پدیده‌ی انتقال و جداسازی در یک کتاب؛ پایه‌ی مکانیک سیالات و عملیات واحد.</p>
+      <div class="tags"><span class="tag">Pearson</span><span class="tag" data-fa="ویرایش ۵" data-en="5th ed.">ویرایش ۵</span></div>
+    </div>
+    <div class="kb-card reveal ref-card">
+      <div class="ref-head">
+        <div class="ref-avatar">BSL</div>
+        <h4>Transport Phenomena<small data-fa="بیرد، استوارت و لایت‌فوت" data-en="Bird, Stewart &amp; Lightfoot">بیرد، استوارت و لایت‌فوت</small></h4>
+      </div>
+      <p data-fa="متن پیشرفته و دقیق پدیده‌های انتقال — برای عمق‌بخشی مفهومی به هر سه انتقال." data-en="The advanced, rigorous transport-phenomena text — depth for all three transports.">متن پیشرفته و دقیق پدیده‌های انتقال — برای عمق‌بخشی مفهومی به هر سه انتقال.</p>
+      <div class="tags"><span class="tag">Wiley</span><span class="tag" data-fa="ویرایش ۲" data-en="2nd ed.">ویرایش ۲</span></div>
+    </div>
+    <div class="kb-card reveal ref-card">
+      <div class="ref-head">
+        <div class="ref-avatar">ID</div>
+        <h4>Fundamentals of Heat and Mass Transfer<small data-fa="اینکروپرا، دویت و برگمن" data-en="Incropera, DeWitt, Bergman &amp; Lavine">اینکروپرا و همکاران</small></h4>
+      </div>
+      <p data-fa="مرجع دقیق انتقال حرارت — از رسانش تا طراحی مبدل؛ پر از مسئله‌های مرتبط با صنعت." data-en="The analytical heat-transfer reference — from conduction to exchanger design, full of industry-type problems.">مرجع دقیق انتقال حرارت — از رسانش تا طراحی مبدل؛ پر از مسئله‌های مرتبط با صنعت.</p>
+      <div class="tags"><span class="tag">Wiley</span><span class="tag" data-fa="ویرایش ۸" data-en="8th ed.">ویرایش ۸</span></div>
+    </div>
+    <div class="kb-card reveal ref-card">
+      <div class="ref-head">
+        <div class="ref-avatar">MSH</div>
+        <h4>Unit Operations of Chemical Engineering<small data-fa="مک‌کیب، اسمیت و هریوت" data-en="McCabe, Smith &amp; Harriott">مک‌کیب، اسمیت و هریوت</small></h4>
+      </div>
+      <p data-fa="کلاسیک درس عملیات واحد — از ستون‌ها و فیلترها تا خشک‌کن و سنگ‌شکن." data-en="The classic unit-operations text — columns, filters, dryers, crushers.">کلاسیک درس عملیات واحد — از ستون‌ها و فیلترها تا خشک‌کن و سنگ‌شکن.</p>
+      <div class="tags"><span class="tag">McGraw-Hill</span><span class="tag" data-fa="ویرایش ۷" data-en="7th ed.">ویرایش ۷</span></div>
+    </div>
+    <div class="kb-card reveal ref-card">
+      <div class="ref-head">
+        <div class="ref-avatar">RT</div>
+        <h4>Mass-Transfer Operations<small data-fa="رابرت تریبال" data-en="Robert E. Treybal">رابرت تریبال</small></h4>
+      </div>
+      <p data-fa="طراحی عملی جذب، استخراج و تقطیر صنعتی — هنوز هم مرجع تصمیم‌گیری عملیاتی." data-en="Practical design of absorption, extraction and distillation — still the go-to guide.">طراحی عملی جذب، استخراج و تقطیر صنعتی — هنوز هم مرجع تصمیم‌گیری عملیاتی.</p>
+      <div class="tags"><span class="tag">McGraw-Hill</span><span class="tag" data-fa="ویرایش ۳" data-en="3rd ed.">ویرایش ۳</span></div>
+    </div>
+    <div class="kb-card reveal ref-card">
+      <div class="ref-head">
+        <div class="ref-avatar">SF</div>
+        <h4>Elements of Chemical Reaction Engineering<small data-fa="H. اسکات فاگلر" data-en="H. Scott Fogler">اسکات فاگلر</small></h4>
+      </div>
+      <p data-fa="کتاب محبوب درس سینتیک و طراحی راکتور — با مثال‌های Polymath و MATLAB؛ پایه‌ی مهندسی واکنش‌شناسی." data-en="The beloved kinetics text: kinetics and reactor design with Polymath/MATLAB examples.">کتاب محبوب درس سینتیک و طراحی راکتور — با مثال‌های Polymath و MATLAB؛ پایه‌ی مهندسی واکنش‌شناسی.</p>
+      <div class="tags"><span class="tag">Prentice Hall</span><span class="tag" data-fa="ویرایش ۵" data-en="5th ed.">ویرایش ۵</span></div>
+    </div>
+    <div class="kb-card reveal ref-card">
+      <div class="ref-head">
+        <div class="ref-avatar">LV</div>
+        <h4>Chemical Reaction Engineering<small data-fa="اکتاویو لیونسپیل" data-en="Octave Levenspiel">اکتاویو لیونسپیل</small></h4>
+      </div>
+      <p data-fa="متنی کوتاه و نبوغ‌آمیز که راکتورها را در ذهن جا می‌اندازد — CSTR، PFR و بازیافت با مثال‌های جمع‌وجور." data-en="The short, genius text that makes reactors finally click — CSTR, PFR, recycle.">متنی کوتاه و نبوغ‌آمیز که راکتورها را در ذهن جا می‌اندازد — CSTR، PFR و بازیافت با مثال‌های جمع‌وجور.</p>
+      <div class="tags"><span class="tag">Wiley</span><span class="tag" data-fa="ویرایش ۳" data-en="3rd ed.">ویرایش ۳</span></div>
+    </div>
+    <div class="kb-card reveal ref-card">
+      <div class="ref-head">
+        <div class="ref-avatar">HK</div>
+        <h4>Distillation Design / Distillation Operation<small data-fa="هنری کیستر" data-en="Henry Z. Kister">هنری کیستر</small></h4>
+      </div>
+      <p data-fa="دو جلد مقدس برج تقطیر — طراحی از صفر تا صد، و عیب‌یابی عملیاتی واحدهای واقعی." data-en="Two sacred volumes on columns: full design from scratch plus real-world troubleshooting.">دو جلد مقدس برج تقطیر — طراحی از صفر تا صد، و عیب‌یابی عملیاتی واحدهای واقعی.</p>
+      <div class="tags"><span class="tag">McGraw-Hill</span><span class="tag" data-fa="۲ جلد" data-en="2 vols.">۲ جلد</span></div>
+    </div>
+    <div class="kb-card reveal ref-card">
+      <div class="ref-head">
+        <div class="ref-avatar">SH</div>
+        <h4>Separation Process Principles<small data-fa="سیدر، هنلی و روپر" data-en="Seader, Henley &amp; Roper">سیدر، هنلی و روپر</small></h4>
+      </div>
+      <p data-fa="جداسازی از تقطیر تا غشا و استخراج مایع-مایع — همراه کامل عملیات واحد ۲." data-en="Separations from distillation to membranes — the UO-2 companion.">جداسازی از تقطیر تا غشا و استخراج مایع-مایع — همراه کامل عملیات واحد ۲.</p>
+      <div class="tags"><span class="tag">Wiley</span><span class="tag" data-fa="ویرایش ۴" data-en="4th ed.">ویرایش ۴</span></div>
+    </div>
+    <div class="kb-card reveal ref-card">
+      <div class="ref-head">
+        <div class="ref-avatar">GP</div>
+        <h4>Perry's Handbook + GPSA Data Book<small data-fa="گرین و پری / مهندسین گاز آمریکا" data-en="Green &amp; Perry / GPSA">گرین و پری + GPSA</small></h4>
+      </div>
+      <p data-fa="کتاب مقدس مهندس شیمی + مرجع داده‌ی صنعت گاز — همراهان دائمی هر میز کار." data-en="The bible of chemical engineering plus the gas-industry data reference — daily desk companions.">کتاب مقدس مهندس شیمی + مرجع داده‌ی صنعت گاز — همراهان دائمی هر میز کار.</p>
+      <div class="tags"><span class="tag">McGraw-Hill</span><span class="tag">GPSA</span></div>
     </div>
   </div>
 </section>
@@ -638,9 +1052,9 @@
     <button class="chip" data-filter="fluids" data-fa="💧 مکانیک سیالات" data-en="💧 Fluid Mechanics">💧 مکانیک سیالات</button>
     <button class="chip" data-filter="heat" data-fa="🔥 انتقال حرارت" data-en="🔥 Heat Transfer">🔥 انتقال حرارت</button>
     <button class="chip" data-filter="mass" data-fa="⚛️ انتقال جرم" data-en="⚛️ Mass Transfer">⚛️ انتقال جرم</button>
-    <button class="chip" data-filter="reac" data-fa="⚗️ راکتور و سینتیک" data-en="⚗️ Reactors &amp;amp; Kinetics">⚗️ راکتور و سینتیک</button>
+    <button class="chip" data-filter="reac" data-fa="⚗️ راکتور و سینتیک" data-en="⚗️ Reactors &amp; Kinetics">⚗️ راکتور و سینتیک</button>
     <button class="chip" data-filter="sep" data-fa="🛢️ جداسازی" data-en="🛢️ Separations">🛢️ جداسازی</button>
-    <button class="chip" data-filter="ctrl" data-fa="🎛️ کنترل و ایمنی" data-en="🎛️ Control &amp;amp; Safety">🎛️ کنترل و ایمنی</button>
+    <button class="chip" data-filter="ctrl" data-fa="🎛️ کنترل و ایمنی" data-en="🎛️ Control &amp; Safety">🎛️ کنترل و ایمنی</button>
   </div>
 
   <div class="kb-grid">
@@ -656,7 +1070,7 @@
       <p data-fa="تصحیح حجم مولکولی (b) و نیروهای جاذبه (a) در فشار بالا؛ نقطه‌ی شروع فهم معادلات حالت واقعی." data-en="Corrects molecular volume (b) and attraction forces (a) at high pressure; the gateway to real EOS models.">تصحیح حجم مولکولی (b) و نیروهای جاذبه (a) در فشار بالا؛ نقطه‌ی شروع فهم معادلات حالت واقعی.</p>
     </div>
     <div class="kb-card reveal" data-cat="thermo">
-      <h4><span data-fa="🧊 قوانین اول و دوم ترمودینامیک" data-en="🧊 1st &amp;amp; 2nd Laws of Thermodynamics">🧊 قوانین اول و دوم ترمودینامیک</span></h4>
+      <h4><span data-fa="🧊 قوانین اول و دوم ترمودینامیک" data-en="🧊 1st &amp; 2nd Laws of Thermodynamics">🧊 قوانین اول و دوم ترمودینامیک</span></h4>
       <div class="kb-formula">ΔU = Q − W &nbsp;&nbsp;|&nbsp;&nbsp; ΔS(universe) ≥ 0</div>
       <p data-fa="پایستگی انرژی برای هر سیستم بسته؛ و اینکه جهان به‌سمت افزایش بی‌نظمی می‌رود — پس هیچ فرآیندی ۱۰۰٪ بازده نیست." data-en="Energy conservation for any closed system; and the universe tends toward more disorder — so no process is 100% efficient.">پایستگی انرژی برای هر سیستم بسته؛ و اینکه جهان به‌سمت افزایش بی‌نظمی می‌رود — پس هیچ فرآیندی ۱۰۰٪ بازده نیست.</p>
     </div>
@@ -666,7 +1080,7 @@
       <p data-fa="اگر ΔG منفی باشد، واکنش خودبه‌خودی است؛ در ΔG = 0 سیستم در تعادل است. کلید تحلیل واکنش‌ها و تعادل فاز." data-en="If ΔG &amp;lt; 0 the reaction is spontaneous; ΔG = 0 means equilibrium. The key to reaction and phase-equilibrium analysis.">اگر ΔG منفی باشد، واکنش خودبه‌خودی است؛ در ΔG = 0 سیستم در تعادل است. کلید تحلیل واکنش‌ها و تعادل فاز.</p>
     </div>
     <div class="kb-card reveal" data-cat="thermo">
-      <h4><span data-fa="🌀 فاگاسیته و تعادل فاز" data-en="🌀 Fugacity &amp;amp; Phase Equilibrium">🌀 فاگاسیته و تعادل فاز</span></h4>
+      <h4><span data-fa="🌀 فاگاسیته و تعادل فاز" data-en="🌀 Fugacity &amp; Phase Equilibrium">🌀 فاگاسیته و تعادل فاز</span></h4>
       <div class="kb-formula">f(liquid) = f(vapor)</div>
       <p data-fa="در تعادل، فاگاسیته‌ی هر جزء در دو فاز برابر است. HYSYS و Aspen با معادله‌ی حالت Peng–Robinson این را محاسبه می‌کنند." data-en="At equilibrium, each component's fugacity is equal in both phases. HYSYS and Aspen calculate this via the Peng–Robinson EOS.">در تعادل، فاگاسیته‌ی هر جزء در دو فاز برابر است. HYSYS و Aspen با معادله‌ی حالت Peng–Robinson این را محاسبه می‌کنند.</p>
       <span class="kb-note" data-fa="⭐ ضروری برای شبیه‌سازی صنعتی" data-en="⭐ Essential for industrial simulation">⭐ ضروری برای شبیه‌سازی صنعتی</span>
@@ -694,7 +1108,7 @@
       <p data-fa="ضریب اصطکاک f از نمودار مودی یا معادلات آشفته؛ به‌همراه ضریب K برای اتصالات — ضروری برای انتخاب پمپ." data-en="Friction factor f from the Moody chart or turbulent correlations; plus K-values for fittings — needed for pump selection.">ضریب اصطکاک f از نمودار مودی یا معادلات آشفته؛ به‌همراه ضریب K برای اتصالات — ضروری برای انتخاب پمپ.</p>
     </div>
     <div class="kb-card reveal" data-cat="fluids">
-      <h4><span data-fa="💧 NPSH و مراقبت از پمپ" data-en="💧 NPSH &amp;amp; Pump Safety">💧 NPSH و مراقبت از پمپ</span></h4>
+      <h4><span data-fa="💧 NPSH و مراقبت از پمپ" data-en="💧 NPSH &amp; Pump Safety">💧 NPSH و مراقبت از پمپ</span></h4>
       <div class="kb-formula">NPSH(a) &gt; NPSH(r) + margin(&asymp;0.5 m)</div>
       <p data-fa="اگر فشار در ورودی پمپ کمتر از فشار بخار سیال شود، پمپ دچار کاویتاسیون می‌شود و حباب‌ها فرومی‌ریزند و به پره‌ها آسیب می‌زنند." data-en="If available suction pressure falls below vapor pressure, the pump cavitates — bubbles implode and damage the impeller.">اگر فشار در ورودی پمپ کمتر از فشار بخار سیال شود، پمپ دچار کاویتاسیون می‌شود و حباب‌ها فرومی‌ریزند و به پره‌ها آسیب می‌زنند.</p>
     </div>
@@ -733,7 +1147,7 @@
       <p data-fa="مثلث تشابه: Re (مومنتوم)، Pr (حرارت)، Sc (جرم) — یک‌بار فهمیدن، سه‌جا استفاده." data-en="The similarity triangle: Re (momentum), Pr (heat), Sc (mass) — learn once, apply three times.">مثلث تشابه: Re (مومنتوم)، Pr (حرارت)، Sc (جرم) — یک‌بار بفهم، سه‌جا استفاده کن.</p>
     </div>
     <div class="kb-card reveal" data-cat="mass">
-      <h4><span data-fa="🏗️ HTU و NTU" data-en="🏗️ HTU &amp;amp; NTU">🏗️ HTU و NTU</span></h4>
+      <h4><span data-fa="🏗️ HTU و NTU" data-en="🏗️ HTU &amp; NTU">🏗️ HTU و NTU</span></h4>
       <div class="kb-formula">Z = (HTU) × (NTU)</div>
       <p data-fa="ارتفاع معادل یک واحد انتقال (HTU) × تعداد واحدها (NTU) → ارتفاع برج پرشده‌ی جذب یا تقطیر — روش اصلی طراحی برج‌های پرشده." data-en="Height of a Transfer Unit times Number of Transfer Units → packed column height; the main design method for packed absorbers.">ارتفاع معادل یک واحد انتقال × تعداد واحدها → ارتفاع برج پرشده — روش اصلی طراحی برج‌های پرشده‌ی جذب.</p>
     </div>
@@ -755,14 +1169,14 @@
       <p data-fa="در CSTR مخلوط کامل است و غلظت خروجی با ورودی برابر؛ در PFR پروفایل تدریجی است — برای سینتیک مرتبه‌ی مثبت، PFR حجم کمتری می‌خواهد." data-en="CSTR is perfectly mixed with a single concentration; PFR has a gradual profile — for positive-order kinetics, PFR is smaller.">در CSTR مخلوط کامل است و غلظت خروجی با ورودی برابر؛ در PFR پروفایل تدریجی است — برای سینتیک مرتبه‌ی مثبت، PFR حجم کمتری می‌خواهد.</p>
     </div>
     <div class="kb-card reveal" data-cat="reac">
-      <h4><span data-fa="🎯 تبدیل، گزینشی و بازده" data-en="🎯 Conversion, Selectivity &amp;amp; Yield">🎯 تبدیل، گزینشی و بازده</span></h4>
+      <h4><span data-fa="🎯 تبدیل، گزینشی و بازده" data-en="🎯 Conversion, Selectivity &amp; Yield">🎯 تبدیل، گزینشی و بازده</span></h4>
       <div class="kb-formula">X = (F(in) − F(out)) / F(in), &nbsp; S = F(desired) / F(waste)</div>
       <p data-fa="نه تبدش X و نه گزینش به‌تنهایی کافی نیست؛ باید تعادل بین دو‌ش را جست: بازده = تبدیل × گزینشی." data-en="Neither conversion nor selectivity alone is enough; yield = conversion × selectivity ties them together.">نه تبدیل X و نه گزینش به‌تنهایی کافی نیستند؛ بازده = تبدیل × گزینش این دو را به هم پیوند می‌دهد.</p>
     </div>
 
     <!-- ======== SEPARATIONS ======== -->
     <div class="kb-card reveal" data-cat="sep">
-      <h4><span data-fa="⚖️ قانون رائولت و فعالیت" data-en="⚖️ Raoult's Law &amp;amp; Activity">⚖️ قانون رائولت و فعالیت</span></h4>
+      <h4><span data-fa="⚖️ قانون رائولت و فعالیت" data-en="⚖️ Raoult's Law &amp; Activity">⚖️ قانون رائولت و فعالیت</span></h4>
       <div class="kb-formula">p(i) = x(i)·γ(i)·P(i)(sat)</div>
       <p data-fa="فشار جزئی هر جزء در تعادل بخار–مایع. γ ≠ 1 برای مخلوط‌های غیرایده‌ای — جایی که HYSYS اهمیت پیدا می‌کند." data-en="Partial pressure of each component in vapor–liquid equilibrium. γ ≠ 1 for non-ideal mixtures — where HYSYS earns its keep.">فشار جزئی هر جزء در تعادل بخار–مایع. γ ≠ 1 برای مخلوط‌های غیرایده‌ای — جایی که HYSYS اهمیت پیدا می‌کند.</p>
     </div>
@@ -784,12 +1198,12 @@
       <p data-fa="سه کف حر، تعابیر لغز وقفه، مشتق — قلب ۹۰٪ حلقه‌های کنترل صنعت از دما تا فشار." data-en="Proportional, integral and derivative actions — the heart of 90% of industrial control loops, from temperature to pressure.">عمل‌های تناسبی، انتگرالی و مشتقی — قلب ۹۰٪ حلقه‌های کنترل صنعت، از دما تا فشار.</p>
     </div>
     <div class="kb-card reveal" data-cat="ctrl">
-      <h4><span data-fa="🔄 حلقه‌ی کنترل و نمادها" data-en="🔄 Control Loop &amp;amp; Symbols">🔄 حلقه‌ی کنترل و نمادها</span></h4>
+      <h4><span data-fa="🔄 حلقه‌ی کنترل و نمادها" data-en="🔄 Control Loop &amp; Symbols">🔄 حلقه‌ی کنترل و نمادها</span></h4>
       <div class="kb-formula">Sensor → Controller → Final element</div>
       <p data-fa="حلقه‌ی بسته: حسگر (TT) → کنترلر (TIC) → شیر کنترل — و زبان مشترک PFD و P&amp;ID که همه‌ی تیم می‌فهمد." data-en="Closed loop: sensor (TT) → controller (TIC) → actuator (valve) — plus the shared language of PFD and P&amp;ID drawings.">حلقه‌ی بسته: حسگر (TT) → کنترلر (TIC) → عملگر (شیر) — به‌علاوه زبان مشترک نقشه‌های PFD و P&amp;ID.</p>
     </div>
     <div class="kb-card reveal" data-cat="ctrl">
-      <h4><span data-fa="🛡️ ایمنی فرآیند — HAZOP و PSV" data-en="🛡️ Process Safety — HAZOP &amp;amp; PSV">🛡️ ایمنی فرآیند — HAZOP و PSV</span></h4>
+      <h4><span data-fa="🛡️ ایمنی فرآیند — HAZOP و PSV" data-en="🛡️ Process Safety — HAZOP &amp; PSV">🛡️ ایمنی فرآیند — HAZOP و PSV</span></h4>
       <div class="kb-formula">LOPA layers → tole risk</div>
       <p data-fa="HAZOP سناریوهای انحراف از حالت سالم را نظام‌مند پیدا می‌کند؛ لایه‌های حفاظتی — شیر ایمنی PSV آخرین سد پیش از فاجعه است." data-en="HAZOP systematically hunts deviant scenarios; protective layers — the PSV relief valve is the last barrier before disaster.">HAZOP سناریوهای انحراف را سیستماتیک پیدا می‌کند؛ لایه‌های حفاظتی — شیر ایمنی PSV آخرین سد پیش از فاجعه است.</p>
     </div>
@@ -851,10 +1265,10 @@
     <div class="rm-group reveal">
       <h4 data-fa="🧱 ترم ۱–۲ | پایه‌ها" data-en="🧱 Sem 1–2 | Foundations">🧱 ترم ۱–۲ | پایه‌ها</h4>
       <ul>
-        <li data-fa="ریاضی ۱ و ۲ — دیفرانسیل و انتگرال" data-en="Calculus 1 &amp;amp; 2">ریاضی ۱ و ۲ — دیفرانسیل و انتگرال</li>
+        <li data-fa="ریاضی ۱ و ۲ — دیفرانسیل و انتگرال" data-en="Calculus 1 &amp; 2">ریاضی ۱ و ۲ — دیفرانسیل و انتگرال</li>
         <li data-fa="شیمی عمومی" data-en="General Chemistry">شیمی عمومی</li>
         <li data-fa="فیزیک ۱" data-en="Physics 1">فیزیک ۱</li>
-        <li data-fa="رسم فنی و محاسبات کامپیوتری" data-en="Engineering drawing &amp;amp; computing">رسم فنی و محاسبات کامپیوتری</li>
+        <li data-fa="رسم فنی و محاسبات کامپیوتری" data-en="Engineering drawing &amp; computing">رسم فنی و محاسبات کامپیوتری</li>
       </ul>
     </div>
     <div class="rm-group reveal">
@@ -869,8 +1283,8 @@
     <div class="rm-group reveal">
       <h4 data-fa="🏭 ترم ۵–۶ | قلب مهندسی فرآیند" data-en="🏭 Sem 5–6 | Heart of Process Engineering">🏭 ترم ۵–۶ | قلب مهندسی فرآیند</h4>
       <ul>
-        <li data-fa="ترمودینامیک ۲ و انتقال حرارت" data-en="Thermo 2 &amp;amp; heat transfer">ترمودینامیک ۲ و انتقال حرارت</li>
-        <li data-fa="عملیات واحد ۱ و ۲" data-en="Unit operations 1 &amp;amp; 2">عملیات واحد ۱ و ۲</li>
+        <li data-fa="ترمودینامیک ۲ و انتقال حرارت" data-en="Thermo 2 &amp; heat transfer">ترمودینامیک ۲ و انتقال حرارت</li>
+        <li data-fa="عملیات واحد ۱ و ۲" data-en="Unit operations 1 &amp; 2">عملیات واحد ۱ و ۲</li>
         <li data-fa="انتقال جرم" data-en="Mass transfer">انتقال جرم</li>
         <li data-fa="شبیه‌سازی HYSYS / Aspen Plus" data-en="HYSYS / Aspen Plus simulation">شبیه‌سازی HYSYS / Aspen Plus</li>
       </ul>
@@ -879,8 +1293,8 @@
       <h4 data-fa="🎓 ترم ۷–۸ | خروج به صنعت" data-en="🎓 Sem 7–8 | Industrial Launch">🎓 ترم ۷–۸ | خروج به صنعت</h4>
       <ul>
         <li data-fa="کنترل فرآیند" data-en="Process control">کنترل فرآیند</li>
-        <li data-fa="طراحی و سنتز فرآیند" data-en="Process design &amp;amp; synthesis">طراحی و سنتز فرآیند</li>
-        <li data-fa="ایمنی فرآیند و HAZOP" data-en="Process safety &amp;amp; HAZOP">ایمنی فرآیند و HAZOP</li>
+        <li data-fa="طراحی و سنتز فرآیند" data-en="Process design &amp; synthesis">طراحی و سنتز فرآیند</li>
+        <li data-fa="ایمنی فرآیند و HAZOP" data-en="Process safety &amp; HAZOP">ایمنی فرآیند و HAZOP</li>
         <li data-fa="کارآموزی صنعتی + پروژه‌ی پایانی" data-en="Industrial internship + capstone">کارآموزی صنعتی + پروژه‌ی پایانی</li>
       </ul>
     </div>
