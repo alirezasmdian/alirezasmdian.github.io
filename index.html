@@ -346,13 +346,13 @@
     .about-grid{grid-template-columns:1fr}
     .photo-frame{width:230px;height:230px}
     .nav-links{
-      position:fixed;top:62px;inset-inline:0;
+      position:fixed;top:62px;left:0;right:0;
       background:var(--bg);border-bottom:1px solid var(--border);
       flex-direction:column;padding:1.2rem;gap:1rem;
-      display:none;
+      display:none;overflow-x:hidden;
     }
     .nav-links.open{display:flex}
-    .menu-toggle{display:flex}
+    .menu-toggle{display:flex;direction:ltr}
     .info-list{grid-template-columns:1fr}
   }
 </style>
