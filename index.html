@@ -60,8 +60,8 @@
     --card:#ffffff;
     --text:#181c24;
     --text-soft:#5c6470;
-    --accent:#2563eb;
-    --accent-soft:#dbe6ff;
+    --accent:#0d9488;
+    --accent-soft:#d3f1ec;
     --border:#e5e7ec;
     --shadow:0 10px 40px rgba(24,28,36,.07);
     --radius:18px;
@@ -72,8 +72,8 @@
     --card:#1a1f2b;
     --text:#e8eaf0;
     --text-soft:#9aa3b2;
-    --accent:#5b8cff;
-    --accent-soft:#1d2a4a;
+    --accent:#2dd4bf;
+    --accent-soft:#0f3d38;
     --border:#242b39;
     --shadow:0 10px 40px rgba(0,0,0,.4);
   }
@@ -154,15 +154,15 @@
     text-decoration:none;font-weight:600;font-size:1rem;
     transition:all .25s;cursor:pointer;border:none;font-family:inherit;
   }
-  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 8px 24px rgba(37,99,235,.3)}
-  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(37,99,235,.4)}
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 8px 24px rgba(13,148,136,.3)}
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(13,148,136,.4)}
   .btn-ghost{background:transparent;color:var(--text);border:1.5px solid var(--border)}
   .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
   .hero-photo{flex-shrink:0;position:relative}
   .photo-frame{
     width:300px;height:300px;border-radius:50%;
     padding:8px;
-    background:linear-gradient(135deg,var(--accent),#7c3aed 60%,#ec4899);
+    background:linear-gradient(135deg,var(--accent),#0f766e 55%,#f59e0b);
     box-shadow:var(--shadow);
     animation:float 6s ease-in-out infinite;
   }
@@ -212,7 +212,7 @@
   .bar{height:7px;background:var(--bg-alt);border-radius:8px;overflow:hidden}
   .bar i{
     display:block;height:100%;border-radius:8px;width:0;
-    background:linear-gradient(90deg,var(--accent),#7c3aed);
+    background:linear-gradient(90deg,var(--accent),#f59e0b);
     transition:width 1.2s cubic-bezier(.2,.7,.3,1);
   }
   .skill-card span{font-size:.8rem;color:var(--text-soft)}
@@ -258,7 +258,7 @@
 
   /* Contact / Footer */
   .contact-box{
-    background:linear-gradient(135deg,var(--accent),#7c3aed);
+    background:linear-gradient(135deg,var(--accent),#0f766e);
     border-radius:24px;padding:3rem 2rem;text-align:center;color:#fff;
     margin-top:4rem;
   }
@@ -349,6 +349,7 @@
       <li><a href="#skills">⚡ <span data-fa="مهارت‌ها" data-en="Skills">مهارت‌ها</span></a></li>
       <li><a href="#resume">📄 <span data-fa="رزومه" data-en="Resume">رزومه</span></a></li>
       <li><a href="#projects">💼 <span data-fa="نمونه کارها" data-en="Projects">نمونه کارها</span></a></li>
+      <li><a href="#industry">🏭 <span data-fa="صنعت" data-en="Industry">صنعت</span></a></li>
       <li><a href="#knowledge">📚 <span data-fa="کتابخانه" data-en="Library">کتابخانه</span></a></li>
     </ul>
     <div class="nav-tools">
@@ -484,6 +485,137 @@
       <h3 data-fa="شروع تحصیل در مهندسی شیمی" data-en="Started Chemical Engineering">شروع تحصیل در مهندسی شیمی</h3>
       <h4 data-fa="دانشگاه صنعتی قوچان — مقطع کارشناسی" data-en="Quchan University of Technology — Undergraduate">دانشگاه صنعتی قوچان — مقطع کارشناسی</h4>
       <p data-fa="قبولی در رشته‌ی مهندسی شیمی و مهاجرت از بوشهر به قوچان برای ادامه‌ی تحصیل؛ شروع یادگیری جدی و علاقه‌مندی به بخش صنعت و شبیه‌سازی." data-en="Admitted to Chemical Engineering and moved from Bushehr to Quchan; started building a serious interest in industry and simulation.">قبولی در رشته‌ی مهندسی شیمی و مهاجرت از بوشهر به قوچان برای ادامه‌ی تحصیل؛ شروع یادگیری جدی و علاقه‌مندی به بخش صنعت و شبیه‌سازی.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INDUSTRY WORLD ================= -->
+<section id="industry">
+  <h2 class="section-title reveal" data-fa="🌍 دنیای صنعت" data-en="🌍 Industry World">🌍 دنیای صنعت</h2>
+  <p class="section-sub reveal" data-fa="از پالایشگاه تا پتروشیمی — تجهیزاتی که یک مهندس شیمی واقعاً باهاشان کار می‌کند" data-en="From refineries to petrochemicals — the equipment an industrial chemical engineer actually works with">از پالایشگاه تا پتروشیمی — تجهیزاتی که یک مهندس شیمی واقعاً باهاشان کار می‌کند</p>
+
+  <h3 class="reveal" style="font-size:1.35rem;font-weight:800;margin-bottom:1rem"><span data-fa="🏭 انواع مجتمع‌های فرآیندی" data-en="🏭 Process Complex Types">🏭 انواع مجتمع‌های فرآیندی</span></h3>
+  <div class="roadmap">
+    <div class="rm-group reveal">
+      <h4 data-fa="🛢️ پالایشگاه نفت" data-en="🛢️ Oil Refinery">🛢️ پالایشگاه نفت</h4>
+      <ul>
+        <li data-fa="تقطیر اتمسفری و خلأ (CDU/VDU)" data-en="Atmospheric &amp;amp; vacuum distillation">تقطیر اتمسفری و خلأ (CDU/VDU)</li>
+        <li data-fa="کراکینگ کاتالیستی FCC و رفرمینگ" data-en="FCC &amp;amp; catalytic reforming">کراکینگ کاتالیستی FCC و رفرمینگ</li>
+        <li data-fa="هیدروکراکینگ و هیدروتریتینگ" data-en="Hydrocracking &amp;amp; hydrotreating">هیدروکراکینگ و هیدروتریتینگ</li>
+        <li data-fa="شیرین‌سازی گاز و واحد گوگرد (Claus)" data-en="Gas sweetening &amp;amp; Claus sulfur">سوخت‌سازی گاز و گوگردزدایی (Claus)</li>
+      </ul>
+    </div>
+    <div class="rm-group reveal">
+      <h4 data-fa="🧪 پتروشیمی" data-en="🧪 Petrochemical">🧪 پتروشیمی</h4>
+      <ul>
+        <li data-fa="کراکینگ بخار نفتا (Steam Cracking)" data-en="Naphtha steam cracking">کراکینگ بخار نفتا (Steam Cracking)</li>
+        <li data-fa="بازیابی اتیلن و پروپیلن" data-en="Ethylene &amp;amp; propylene recovery">بازیابی اتیلن و پروپیلن</li>
+        <li data-fa="پلیمریزاسیون: PE / PP / PVC" data-en="Polymerization: PE / PP / PVC">پلیمریزاسیون: PE / PP / PVC</li>
+        <li data-fa="آروماتیک‌ها: بنزن، تولوئن، زیلن (BTX)" data-en="Aromatics: benzene, toluene, xylene">آروماتیک‌ها: بنزن، تولوئن، زیلن (BTX)</li>
+      </ul>
+    </div>
+    <div class="rm-group reveal">
+      <h4 data-fa="💨 پردازش گاز طبیعی" data-en="💨 Natural Gas Processing">💨 پردازش گاز طبیعی</h4>
+      <ul>
+        <li data-fa="شیرین‌سازی گاز با آمین و کلاوس" data-en="Amine sweetening &amp;amp; Claus">شیرین‌سازی با آمین و Claus</li>
+        <li data-fa="بازیابی مایعات گازی NGL (Cryogenic)" data-en="NGL / cryogenic recovery">بازیابی مایعات گازی NGL (کریوجنیک)</li>
+        <li data-fa="LNG و CNG — مایع‌سازی و ذخیره‌سازی" data-en="LNG &amp;amp; CNG — liquefaction &amp;amp; storage">LNG و CNG — مایع‌سازی و ذخیره‌سازی</li>
+        <li data-fa="رطوبت‌گیری گاز با TEG" data-en="Gas dehydration with TEG">رطوبت‌گیری گاز با TEG</li>
+      </ul>
+    </div>
+    <div class="rm-group reveal">
+      <h4 data-fa="⚙️ تاسیسات و Utilities" data-en="⚙️ Utilities &amp;amp; Steam">⚙️ تاسیسات و Utilities</h4>
+      <ul>
+        <li data-fa="بویلر و شبکه‌ی بخار ۳ سطحی (HP/MP/LP)" data-en="Boilers and HP/MP/LP steam network">بویلر و شبکه‌ی بخار ۳ سطحی (HP/MP/LP)</li>
+        <li data-fa="آب DEMIN و برج خنک‌کننده" data-en="Demin water &amp;amp; cooling tower">آب دی‌مین و برج خنک‌کننده</li>
+        <li data-fa="هوای ابزار (Instrument Air) و N₂" data-en="Instrument air &amp;amp; N₂">هوای ابزار (Instrument Air) و N₂</li>
+        <li data-fa="بازیابی انرژی: توربین، سوپرهیتر، اکونومایزر" data-en="Energy recovery: turbines &amp;amp; economizers">بازیابی انرژی: توربین، اورُهیت‌ر، اکونومایزر</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="reveal" style="font-size:1.35rem;font-weight:800;margin-top:2.8rem;margin-bottom:1rem"><span data-fa="⚙️ تجهیزات اصلی صنعتی" data-en="⚙️ Core Industrial Equipment">⚙️ تجهیزات اصلی صنعتی</span></h3>
+  <div class="kb-grid">
+    <div class="kb-card reveal">
+      <h4><span data-fa="🛢️ برج تقطیر" data-en="🛢️ Distillation Column">🛢️ برج تقطیر</span></h4>
+      <p data-fa="قلب جداسازی؛ بخار و مایع در سینی‌ها بالا و پایین ردوبدل می‌شوند. داغ‌ترین نقطه ری‌بویلر و سردترین کندانسور است." data-en="The heart of separation; vapor and liquid exchange stages up and down. Hottest point: reboiler, coldest: condenser.">قلب جداسازی؛ بخار و مایع در سینی‌ها بالا و پایین ردوبدل می‌شوند. داغ‌ترین نقطه ری‌بویلر و سردترین کندانسور است.</p>
+      <div class="tags"><span class="tag" data-fa="عملیات واحد" data-en="Unit Ops">عملیات واحد</span></div>
+    </div>
+    <div class="kb-card reveal">
+      <h4><span data-fa="🔥 کوره (Fired Heater)" data-en="🔥 Fired Heater">🔥 کوره (Fired Heater)</span></h4>
+      <p data-fa="سوخت می‌سوزد تا خوراک را قبل از راکتور/برج پیش‌گرم کند؛ رادیانت و کانوَکشن دو اقلیم حرارتی متفاوتاند." data-en="Burns fuel to preheat feed before reactors/columns; radiant and convection sections behave differently.">سوخت می‌سوزد تا خوراک را پیش از راکتور یا برج پیش‌گرم کند؛ بخش رادیانت و همرفتی رفتار متفاوتی دارند.</p>
+      <div class="tags"><span class="tag" data-fa="انتقال حرارت" data-en="Heat Transfer">انتقال حرارت</span></div>
+    </div>
+    <div class="kb-card reveal">
+      <h4><span data-fa="🧊 کندانسور" data-en="🧊 Condenser">🧊 کندانسور</span></h4>
+      <p data-fa="بخار را به مایع تبدیل می‌کند — با آب یا هوا؛ برگشت کامل برج به حرارتی بستگی دارد که اینجا گرفته می‌شود." data-en="Turns vapor to liquid via water or air cooling; the whole reflux of the column depends on heat removed here.">بخار را به مایع تبدیل می‌کند — با آب یا هوا؛ برگشت کامل برج به حرارتی بستگی دارد که اینجا گرفته می‌شود.</p>
+      <div class="tags"><span class="tag">LMTD</span></div>
+    </div>
+    <div class="kb-card reveal">
+      <h4><span data-fa="♨️ دیگ بخار (Boiler)" data-en="♨️ Steam Boiler">♨️ دیگ بخار (Boiler)</span></h4>
+      <p data-fa="انرژی سوخت → بخار فشار بالا؛ شیمی آب بویلر (DO، فسفات، هاردنس) حیاتی است تا رسوب نگیرد." data-en="Fuel energy → high-pressure steam; boiler water chemistry (oxygen scavengers, phosphate) is critical to avoid scaling.">انرژی سوخت → بخار فشار بالا؛ شیمی آب بویلر (جاذب اکسیژن، فسفات و سختی) برای جلوگیری از رسوب حیاتی است.</p>
+      <div class="tags"><span class="tag" data-fa="Utilities" data-en="Utilities">Utilities</span></div>
+    </div>
+    <div class="kb-card reveal">
+      <h4><span data-fa="🌀 پمپ سانتیریفوژ" data-en="🌀 Centrifugal Pump">🌀 پمپ سانتیریفوژ</span></h4>
+      <p data-fa="منحنی H–Q و نقطه‌ی کار WIN؛ اگر NPSH موجود کمتر از لازم باشد، کاویتاسیون پره‌ها را می‌خورد." data-en="H–Q curve and operating point; insufficient NPSH causes cavitation that eats the impeller.">منحنی H–Q و نقطه‌ی کار؛ اگر NPSH موجود کمتر از لازم باشد، کاویتاسیون پره‌ها را از بین می‌برد.</p>
+      <div class="tags"><span class="tag">NPSH</span></div>
+    </div>
+    <div class="kb-card reveal">
+      <h4><span data-fa="🔩 کمپرسور" data-en="🔩 Compressor">🔩 کمپرسور</span></h4>
+      <p data-fa="گاز را فشرده می‌کند — سانتریفیوژ یا رفت‌وبرگشتی؛ خطای surge در کمپرسور سانتریفیوژ فاجعه‌بار است." data-en="Compresses gas — centrifugal or reciprocating; surge in a centrifugal machine is catastrophic.">گاز را فشرده می‌کند — سانتریفیوژ یا رفت‌وبرگشتی؛ خطای surge در کمپرسور سانتریفیوژ فاجعه‌بار است.</p>
+      <div class="tags"><span class="tag" data-fa="مکانیک سیالات" data-en="Fluids">مکانیک سیالات</span></div>
+    </div>
+    <div class="kb-card reveal">
+      <h4><span data-fa="⚗️ راکتور" data-en="⚗️ Reactor">⚗️ راکتور</span></h4>
+      <p data-fa="جایی که ارزش ایجاد می‌شود؛ کنترل دما (جکت، quench، رقت کاتالیست) تصمیم‌سازترین انتخاب طراحی است." data-en="Where value is created; temperature control (jacket, quench, catalyst dilution) is the decisive design choice.">جایی که ارزش ایجاد می‌شود؛ کنترل دما (جکت، خنک‌سازی سریع، رقت کاتالیست) تصمیم‌سازترین انتخاب طراحی است.</p>
+      <div class="tags"><span class="tag" data-fa="سینتیک" data-en="Kinetics">سینتیک</span></div>
+    </div>
+    <div class="kb-card reveal">
+      <h4><span data-fa="🔧 مبدل حرارتی (HEX)" data-en="🔧 Heat Exchanger (HEX)">🔧 مبدل حرارتی (HEX)</span></h4>
+      <p data-fa="رایج‌ترین تجهیز صنعت: پوسته-لوله یا صفحه‌ای؛ فولینگ (رسوب) و نشتی دو درد همیشگی مهندسان‌اند." data-en="The most common industry equipment: shell-and-tube or plate; fouling and leaks are eternal pains.">رایج‌ترین تجهیز صنعت: پوسته-لوله یا صفحه‌ای؛ فولینگ (رسوب) و نشتی دو درد همیشگی مهندسان‌اند.</p>
+      <div class="tags"><span class="tag">U &amp;amp; LMTD</span></div>
+    </div>
+    <div class="kb-card reveal">
+      <h4><span data-fa="💠 سپراتور فاز (KO Drum)" data-en="💠 Phase Separator (KO Drum)">💠 سپراتور فاز (KO Drum)</span></h4>
+      <p data-fa="گاز و مایع را با گرانش جدا می‌کند؛ رابطه‌ی Souders–Brown سرعت مجاز را تعیین می‌کند تا قطره‌ها همراه گاز نروند." data-en="Separates gas and liquid by gravity; Souders–Brown sets allowable velocity so droplets don't carry over.">گاز و مایع را با گرانش جدا می‌کند؛ رابطه‌ی Souders–Brown سرعت مجاز را تعیین می‌کند تا قطره‌ها همراه گاز نروند.</p>
+      <div class="tags"><span class="tag" data-fa="جداسازی" data-en="Separation">جداسازی</span></div>
+    </div>
+  </div>
+
+  <h3 class="reveal" style="font-size:1.35rem;font-weight:800;margin-top:2.8rem;margin-bottom:1rem"><span data-fa="📚 مراجع مهم دروس مهندسی شیمی" data-en="📚 ChemEng Course References">📚 مراجع مهم دروس مهندسی شیمی</span></h3>
+  <div class="roadmap">
+    <div class="rm-group reveal">
+      <h4 data-fa="📘 دروس پایه" data-en="📘 Foundation Courses">📘 دروس پایه</h4>
+      <ul>
+        <li data-fa="ترمودینامیک: Cengel &amp;amp; Boles — Thermodynamics: An Engineering Approach + Smith, Van Ness &amp;amp; Abbott" data-en="Thermodynamics: Cengel &amp;amp; Boles + Smith, Van Ness &amp;amp; Abbott">ترمودینامیک: Cengel &amp;amp; Boles + Smith, Van Ness &amp;amp; Abbott</li>
+        <li data-fa="شیمی فیزیک: Atkins — Physical Chemistry" data-en="Physical chemistry: Atkins">شیمی فیزیک: Atkins — Physical Chemistry</li>
+        <li data-fa="ریاضیات: Kreyszig — Advanced Engineering Mathematics" data-en="Math: Kreyszig Advanced Engineering Mathematics">ریاضیات: Kreyszig — Advanced Engineering Mathematics</li>
+      </ul>
+    </div>
+    <div class="rm-group reveal">
+      <h4 data-fa="📗 انتقال‌ها" data-en="📗 Transport Phenomena">📗 انتقال‌ها</h4>
+      <ul>
+        <li data-fa="مکانیک سیالات: Geankoplis — Transport Processes (باب ۱ و ۲) + Bird, Stewart, Lightfoot" data-en="Fluids: Geankoplis + Bird, Stewart, Lightfoot">مکانیک سیالات: Geankoplis + Bird, Stewart, Lightfoot</li>
+        <li data-fa="انتقال حرارت: Incropera — Fundamentals of Heat and Mass Transfer" data-en="Heat: Incropera">انتقال حرارت: Incropera — Fundamentals of Heat and Mass Transfer</li>
+        <li data-fa="انتقال جرم: Treybal — Mass-Transfer Operations" data-en="Mass transfer: Treybal">انتقال جرم: Treybal — Mass-Transfer Operations</li>
+      </ul>
+    </div>
+    <div class="rm-group reveal">
+      <h4 data-fa="📙 دروس تخصصی" data-en="📙 Specialized Courses">📙 دروس تخصصی</h4>
+      <ul>
+        <li data-fa="عملیات واحد: McCabe, Smith &amp;amp; Harriott — Unit Operations" data-en="Unit operations: McCabe, Smith &amp;amp; Harriott">عملیات واحد: McCabe, Smith &amp;amp; Harriott — Unit Operations</li>
+        <li data-fa="واکنش‌شناسی: Fogler — Elements of CRE + Levenspiel" data-en="Reaction engineering: Fogler + Levenspiel">واکنش‌شناسی: Fogler + Levenspiel</li>
+        <li data-fa="تقطیر و جداسازی: Kister — Distillation Design + Seader" data-en="Distillation &amp;amp; separations: Kister + Seader">تقطیر و جداسازی: Kister — Distillation Design + Seader</li>
+      </ul>
+    </div>
+    <div class="rm-group reveal">
+      <h4 data-fa="📕 مراجع صنعتی دائمی" data-en="📕 Industrial Handbooks">📕 مراجع صنعتی دائمی</h4>
+      <ul>
+        <li data-fa="Perry's Chemical Engineers' Handbook — کتاب مقدس مهندس شیمی" data-en="Perry's Handbook — the bible of chemical engineering">Perry's Chemical Engineers' Handbook — کتاب مقدس مهندس شیمی</li>
+        <li data-fa="GPSA Engineering Data Book — مرجع تجهیزات گازی" data-en="GPSA Data Book — gas processing reference">GPSA Engineering Data Book — مرجع تجهیزات گازی</li>
+        <li data-fa="API Standards و CCPS — استانداردها و ایمنی فرآیند" data-en="API Standards &amp;amp; CCPS guidelines">API Standards و CCPS — استانداردها و ایمنی فرآیند</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -902,7 +1034,7 @@ startTyping();
 
 /* ---------- Knowledge Library: tabs + live search ---------- */
 const kbSearch = document.getElementById('kbSearch');
-const kbCards = Array.from(document.querySelectorAll('.kb-card'));
+const kbCards = Array.from(document.querySelectorAll('#knowledge .kb-card'));
 const kbChips = Array.from(document.querySelectorAll('.tabs .chip'));
 let activeTab = 'all';
 
