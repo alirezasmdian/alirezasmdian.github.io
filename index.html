@@ -345,20 +345,18 @@
     .hero-sub{margin-inline:auto}
     .about-grid{grid-template-columns:1fr}
     .photo-frame{width:230px;height:230px}
-    .nav{
-      justify-content:flex-start;
-    }
-    .nav-tools{
-      margin-left:auto;
-    }
     .nav-links{
-      position:fixed;top:62px;left:0;right:0;
+      position:fixed;top:62px;inset-inline:0;
       background:var(--bg);border-bottom:1px solid var(--border);
       flex-direction:column;padding:1.2rem;gap:1rem;
-      display:none;overflow-x:hidden;
+      display:none;
+      align-items:flex-start;
     }
+    .nav-links a{text-align:start;width:100%;display:block}
     .nav-links.open{display:flex}
-    .menu-toggle{display:flex;direction:ltr}
+    .menu-toggle{display:flex}
+    /* keep the hamburger toggle at the outer edge in both LTR and RTL */
+    .nav-tools{margin-inline-start:auto}
     .info-list{grid-template-columns:1fr}
   }
 </style>
